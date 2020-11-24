@@ -2,3 +2,38 @@
 
 
 <!-- charities  -->
+<div class="container">
+  <div class="px-5 pt-5 mt-5">
+    <div class="row px-1 pb-5 justify-content-around">
+      <% Charity.all.each do |charity| %>
+        <div class="pb-5">
+          <div class="col-12 col-xl-3 col-lg-4 clo-md-6">
+            <%#= link_to charity_path(charity) do %>
+            <div class="card-charity">
+              <div>
+               <!-- card-logo here -->
+              </div>
+              <div class="card-charity-info justify-content-between">
+                  <h3><%= charity.name %></h3>
+                  <h4><%= charity.category %></h4>
+                 <!--  <%#= link_to button %>
+                  <%#= link_to button %> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
