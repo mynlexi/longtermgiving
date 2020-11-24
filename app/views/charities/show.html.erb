@@ -8,4 +8,20 @@
 <h4><%= @charity.category %></h4>
 <br>
 <p><%= @charity.description %></p>
+<br>
+<br>
+<h2>Charity's Choices:</h2>
+<br>
+<ul>
+  <% @choices.each do |choice| %>
+    <li>
+      <h4><%= choice.asset.stock_symbol %></h4>
+      <small><%= choice.asset.asset_type %></small>
+      <br>
+      <%= choice.asset.description %>
+      <br>
+    </li>
+    <br>
+  <% end %>
+</ul>
 
