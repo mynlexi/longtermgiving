@@ -11,7 +11,16 @@
 <% @donations.each do |donation| %>
     <ul>
         <li>
-            <%= donation %>
+            <%= donation.charity.name %>
+        </li>
+        <li>
+            <%= donation.asset.stock_symbol %>
+        </li>
+        <li>
+            <%= donation.quantity %>
+        </li>
+        <li>
+            <%= donation.donation_amount %>
         </li>
     </ul>
 <% end %>
