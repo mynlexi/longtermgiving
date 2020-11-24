@@ -10,6 +10,7 @@ class FavouritesController < ApplicationController
       redirect_to charity_path(@favourite.charity)
       # add flash notifaction that something went wrong
     end
+  end
 
   def destroy
     @favourite.destroy
