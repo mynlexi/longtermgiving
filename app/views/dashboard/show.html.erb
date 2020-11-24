@@ -1,0 +1,17 @@
+<h1>Favourites</h1>
+<% @favourites.each do |favourite| %>
+    <ul>
+        <li>
+            <%= favourite.charity.name %>
+        </li>
+    </ul>
+<% end %>
+
+<h1>History</h1>
+<% @history.each do |order| %>
+    <ul>
+        <li>
+            <%= order.charity.name %>
+        </li>
+    </ul>
+<% end %>

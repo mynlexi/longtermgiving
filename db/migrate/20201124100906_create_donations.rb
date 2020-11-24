@@ -11,7 +11,7 @@ class CreateDonations < ActiveRecord::Migration[6.0]
       t.integer :limit_price 
       t.integer :stop_price
       t.string :time_in_force, :default =>"Day"
-      t.string :order_status, :default => "Filled"
+      t.string :order_status, :default => "New"
 
       t.timestamps
     end
