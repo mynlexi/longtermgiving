@@ -7,10 +7,11 @@ class CreateDonations < ActiveRecord::Migration[6.0]
       t.integer :donation_amount
       t.integer :quantity
       t.string :symbol
-      t.string :order_type
-      t.integer :limit_price
+      t.string :order_type, :default =>"Market"
+      t.integer :limit_price 
       t.integer :stop_price
-      t.string :time_in_force
+      t.string :time_in_force, :default =>"Day"
+      t.string :order_status, :default => "Filled"
 
       t.timestamps
     end
