@@ -8,10 +8,10 @@
 <% end %>
 
 <h1>History</h1>
-<% @history.each do |order| %>
+<% @donations.each do |donation| %>
     <ul>
         <li>
-            <%= order.charity.name %>
+            <%= donation %>
         </li>
     </ul>
 <% end %>
