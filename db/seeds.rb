@@ -87,11 +87,11 @@ puts "creating favourits"
 
 puts "creating donation"
   
-  Donation.create!(charity_id: 1, user_id: 1, asset_id: 1, donation_amount: 10, quantity: 1, symbol: "AAPL")
-  Donation.create!(charity_id: 2, user_id: 1, asset_id: 2, donation_amount: 1000, quantity: 3, symbol: "QQQ")
-  Donation.create!(charity_id: 3, user_id: 1, asset_id: 4, donation_amount: 500, quantity: 1, symbol: "GLD")
-  Donation.create!(charity_id: 4, user_id: 1, asset_id: 5, donation_amount: 10000000, quantity: 100, symbol: "YOLO")
-  Donation.create!(charity_id: 1, user_id: 1, asset_id: 1, donation_amount: 10, quantity: 1, symbol: "AAPL")
+  Donation.create!(charity_id: 1, user_id: 1, asset_id: 1, donation_amount: 10, quantity: 1, order_status: "Filled")
+  Donation.create!(charity_id: 2, user_id: 1, asset_id: 2, donation_amount: 1000, quantity: 3,  order_status: "Filled")
+  Donation.create!(charity_id: 3, user_id: 1, asset_id: 4, donation_amount: 500, quantity: 1,  order_status: "Filled")
+  Donation.create!(charity_id: 4, user_id: 1, asset_id: 5, donation_amount: 10000000, quantity: 100)
+  Donation.create!(charity_id: 1, user_id: 1, asset_id: 1, donation_amount: 10, quantity: 1)
  
 
 
