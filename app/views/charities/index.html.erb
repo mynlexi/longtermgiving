@@ -4,24 +4,27 @@
     <h3>Back to Home</h3>
   <% end %>
   <br>
+
   <div class="px-5 pt-5 mt-5">
     <div class="row px-1 pb-5 justify-content-around">
       <% @charities.each do |charity| %>
+
         <%= link_to charity_path(charity) do %>
-          <div class="pb-5 border">
-            <div class="col-12 col-xl-3 col-lg-4 clo-md-6">
-              <%#= link_to charity_path(charity) do %>
-              <div class="card-charity">
-                <div>
-                 <!-- card-logo here -->
+          <div class="pb-5 col-sm-6 col-md-4 ">
+            <div class="border charity-card-container ">
+              <div class="charity-logo">
+                <%= cl_image_tag charity.photo.key, height: 171, width: 222, crop: :pad %>
+              </div>
+              <div class="charity-text-box">
+                <div class="header-3">
+                  <%= charity.name %>
                 </div>
-                <div class="card-charity-info justify-content-between">
-                    <h3><%= charity.name %></h3>
-                    <h4><%= charity.category %></h4>
-                    <%= cl_image_tag charity.photo.key, height: 300, width: 400, crop: :fill %>
-                   <!--  <%#= link_to button %>
-                    <%#= link_to button %> -->
+                <div class="category pt-3">
+                  <%= charity.category %>
                 </div>
+              </div>
+              <div class="donation">
+                Donate
               </div>
             </div>
           </div>
