@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 2020_11_24_114945) do
     t.bigint "asset_id", null: false
     t.integer "donation_amount"
     t.integer "quantity"
+    t.string "symbol"
     t.string "order_type", default: "Market"
     t.integer "limit_price"
     t.integer "stop_price"
