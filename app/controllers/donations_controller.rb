@@ -2,6 +2,9 @@ class DonationsController < ApplicationController
   before_action :set_donation, only: [:destroy]
   before_action :set_charity
 
+  def create
+  end
+
 
   private
 

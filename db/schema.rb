@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 2020_11_24_114945) do
     t.string "order_type", default: "Market"
     t.integer "limit_price"
     t.integer "stop_price"
+    t.string "order_id"
     t.string "time_in_force", default: "Day"
     t.string "order_status", default: "Filled"
     t.datetime "created_at", precision: 6, null: false
