@@ -17,7 +17,4 @@ class FavouritesController < ApplicationController
     redirect_to dashboard_path
     #or last path?
   end
-
-
-  
 end
