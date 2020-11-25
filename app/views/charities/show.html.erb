@@ -22,9 +22,15 @@
       <small><%= choice.asset.asset_type %></small>
       <br>
       <%= choice.asset.description %>
+      <%= link_to "Donate",  new_charity_donation_path(charity_id: choice.charity.id, asset_id: choice.asset.id), class: "btn btn-danger"%>
+      
       <br>
     </li>
     <br>
   <% end %>
 </ul>
+<%# still need to connect the closing numbers to the choices%>
+<% @bars.each do |key, value|  %>
+  <%= value[0].close %>
+  <% end  %> 
 

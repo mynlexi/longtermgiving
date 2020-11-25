@@ -4,9 +4,11 @@
     <h3>Back to Home</h3>
   <% end %>
   <br>
-  <div class="px-5 p-5 mt-5">
-    <div class="row px-1 justify-content-around">
-      <% Charity.all.each do |charity| %>
+
+  <div class="px-5 pt-5 mt-5">
+    <div class="row px-1 pb-5 justify-content-around">
+      <% @charities.each do |charity| %>
+
         <%= link_to charity_path(charity) do %>
           <div class="pb-5 col-sm-6 col-md-4 ">
             <div class="border charity-card-container ">
