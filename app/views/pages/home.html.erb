@@ -1,6 +1,20 @@
 <!-- bannersection  -->
+  <div class="banner">
+<br>
+<br>
+<%= form_tag charities_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find your charity"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
 
+</div>
 
+<br>
+<br>
 <!-- charities  -->
 <div class="container">
   <br>

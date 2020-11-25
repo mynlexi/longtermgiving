@@ -67,11 +67,12 @@ ActiveRecord::Schema.define(version: 2020_11_24_114945) do
     t.bigint "asset_id", null: false
     t.integer "donation_amount"
     t.integer "quantity"
+    t.string "symbol"
     t.string "order_type", default: "Market"
     t.integer "limit_price"
     t.integer "stop_price"
     t.string "time_in_force", default: "Day"
-    t.string "order_status", default: "New"
+    t.string "order_status", default: "Filled"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["asset_id"], name: "index_donations_on_asset_id"

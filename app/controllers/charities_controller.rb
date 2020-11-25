@@ -4,7 +4,14 @@ class CharitiesController < ApplicationController
   skip_after_action :verify_policy_scoped
 
   def index
-    @charities = Charity.all
+    params[:query].present?
+    sql_query = "name @@ :query OR category @@ :query OR description @@ :query"
+    @charities = Charity.where(sql_query, query: "%#{params[:query]}%")
+
+    if @charities.empty?
+      @charities = Charity.all
+      flash[:notice] = "Sorry, search was not successful"
+    end
   end
 
   def show
