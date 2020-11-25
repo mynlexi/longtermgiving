@@ -29,6 +29,8 @@ gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
+gem 'pundit'
+gem 'simple_form'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
@@ -64,4 +66,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # our new gems
 gem 'cloudinary', '~> 1.16.0'
+
 gem 'alpaca-trade-api'
+

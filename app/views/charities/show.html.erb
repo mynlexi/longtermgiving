@@ -1,0 +1,30 @@
+<%= link_to charities_path do %>
+  <h3>Back to Charities</h3>
+<% end %>
+<br>
+<%= link_to 'Donate', new_charity_donation_path([@charity, @donation]) %>
+<br>
+<h3><%= @charity.name %></h3>
+<br>
+<h4><%= @charity.category %></h4>
+<br>
+<%= cl_image_tag @charity.photo.key, height: 300, width: 400, crop: :fill %>
+<br>
+<p><%= @charity.description %></p>
+<br>
+<br>
+<h2>Charity's Choices:</h2>
+<br>
+<ul>
+  <% @choices.each do |choice| %>
+    <li>
+      <h4><%= choice.asset.stock_symbol %></h4>
+      <small><%= choice.asset.asset_type %></small>
+      <br>
+      <%= choice.asset.description %>
+      <br>
+    </li>
+    <br>
+  <% end %>
+</ul>
+

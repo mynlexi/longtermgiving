@@ -3,6 +3,11 @@
 
 <!-- charities  -->
 <div class="container">
+  <br>
+  <%= link_to charities_path do %>
+    <h3>See all charities</h3>
+  <% end %>
+  <br>
   <div class="px-5 pt-5 mt-5">
     <div class="row px-1 pb-5 justify-content-around">
       <% Charity.all.each do |charity| %>
@@ -16,6 +21,7 @@
               <div class="card-charity-info justify-content-between">
                   <h3><%= charity.name %></h3>
                   <h4><%= charity.category %></h4>
+                  <%= cl_image_tag charity.photo.key, height: 300, width: 400, crop: :fill %>
                  <!--  <%#= link_to button %>
                   <%#= link_to button %> -->
               </div>
