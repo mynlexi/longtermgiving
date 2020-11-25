@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   get "/dashboard", to: "dashboard#show"
 
   resources :favourites, only: [:create, :destroy]
+
+  ################################################ for testing alpaca
+  get "/client", to: "alpaca#client"
+  get "/client/new_order", to: "alpaca#new"
+  post "/client", to: "alpaca#create"
   
 
 end

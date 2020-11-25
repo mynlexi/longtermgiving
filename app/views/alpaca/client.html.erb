@@ -1,0 +1,18 @@
+<%= @client  %>
+<%= @asset.inspect  %>
+<%= @bars.inspect  %>
+<br>
+<% @bars.each do |key, value|  %>
+  <%= value[0].close %>
+  <% end  %> 
+
+
+
+
+<br>
+<%= @client.orders.first.inspect  %>
+<br>
+<%= link_to "new yolo", client_new_order_path, class: "btn btn-primary"
+    %>
+
+
