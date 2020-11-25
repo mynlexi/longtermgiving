@@ -5,7 +5,7 @@ class AlpacaController < ApplicationController
   def client
     set_client
     @asset = @client.asset(symbol: "CORN")
-    @bars = @client.bars("5Min",["CORN"], limit: 1)
+    @bars = @client.bars("5Min",["CORN", "GLD"], limit: 1)
     
   end
 

@@ -2,7 +2,9 @@
 <%= @asset.inspect  %>
 <%= @bars.inspect  %>
 <br>
-<%= @bars["CORN"][0].close  %>
+<% @bars.each do |key, value|  %>
+  <%= value[0].close %>
+  <% end  %> 
 
 
 
