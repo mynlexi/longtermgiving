@@ -6,6 +6,8 @@ class DonationsController < ApplicationController
   def new
     @donation = Donation.new
     authorize @donation
+    @asset = Asset.find(params[:asset_id])
+
   end
   def create
     @donation = Donation.new(donation_params)
@@ -25,8 +27,10 @@ class DonationsController < ApplicationController
     @donation = Donation.find(params[:id])
   end
 
-  def set_charity
+  def set_args
     @charity = Charity.find(params[:charity_id])
+    @asset = Asset.find(params[:asset_id])
+    @client =  Alpaca::Trade::Api::Client.new
   end
 
   def donation_params

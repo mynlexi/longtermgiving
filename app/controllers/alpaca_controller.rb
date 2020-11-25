@@ -1,8 +1,12 @@
 require 'alpaca/trade/api'
 class AlpacaController < ApplicationController
+  skip_after_action :verify_authorized
 
   def client
     set_client
+    @asset = @client.asset(symbol: "CORN")
+    @bars = @client.bars("day",["CORN"], limit: 1)
+    
   end
 
   def new
