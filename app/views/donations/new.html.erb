@@ -1,0 +1,5 @@
+<%= simple_form_for([@charity, @donation]) do |f| %>
+  <%= f.input :donation_amount %>
+  <%#= f.input :to_date %>
+  <%= f.submit "Submit", disable_with: 'Submiting...' %>
+<% end %>

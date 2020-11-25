@@ -2,6 +2,7 @@
   <h3>Back to Charities</h3>
 <% end %>
 <br>
+<%= link_to 'Donate', new_charity_donation_path([@charity, @donation]) %>
 <br>
 <h3><%= @charity.name %></h3>
 <br>
