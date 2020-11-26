@@ -1,6 +1,25 @@
+.navbar {
+  // padding: 0.5rem 1rem;
+    padding-top: 0.2rem;
+    // padding-right: 1rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+}
+
+.nav-link {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+
+  color: #FFFBFF!important;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #040F0F;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,5 +27,5 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  height: 64px;
 }
