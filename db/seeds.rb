@@ -11,8 +11,8 @@ require "open-uri"
 Donation.destroy_all
 Favourite.destroy_all
 CharitysChoice.destroy_all
-User.destroy_all
 Charity.destroy_all
+User.destroy_all
 
 
 puts "creating users"
