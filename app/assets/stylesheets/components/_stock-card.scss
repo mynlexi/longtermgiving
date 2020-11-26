@@ -10,3 +10,87 @@
     border-radius: 5px;
 }
 
+.stock-card-container .header-stock-symbol {
+    position: absolute;
+    left: 19px;
+    top: 14px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 37px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px;
+
+    color: #000000;
+}
+
+.stock-card-container .stock-type {
+    position: absolute;
+    left: 34px;
+    top: 69px;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+
+    color: #444444;
+}
+
+.stock-card-container .stock-description-box {
+    position: absolute;
+    width: 518px;
+    height: 105px;
+    left: 34px;
+    top: 119px;
+}
+
+.stock-card-container .stock-description-box .stock-description {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 1px;
+
+    color: #000000;
+}
+
+.stock-card-container .donation-btn {
+    position: absolute;
+    left: 81.26%;
+    right: 3.36%;
+    top: 12.79%;
+    bottom: 69.38%;
+
+    background: radial-gradient(50% 50% at 50% 50%, #0FA3B1 0%, rgba(15, 163, 177, 0.4) 100%);
+    border-radius: 5px;
+}
+
+.stock-card-container .donation-btn .donate-text {
+    position: absolute;
+    width: 77px;
+    height: 20px;
+    left: calc(50% - 77px/2 + 0.28px);
+    top: calc(50% - 20px/2);
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 3px;
+
+    color: #FFFAFF;
+}
