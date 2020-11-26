@@ -19,8 +19,8 @@
         </li>
         <li><%= link_to "log-out", destroy_user_session_path, method: :delete, class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606391510/search_gdqujp.svg", class: "search-icon"%>
+        <li class="nav-item flex">
+        <%= link_to charities_path, :class=> "you_class" do %><i class="fa fa-search" aria-hidden="true" target="_blank"></i><% end %>  %>
         </li>
       <% else %>
         <li class="nav-item">

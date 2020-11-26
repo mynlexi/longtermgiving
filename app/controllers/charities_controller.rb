@@ -18,16 +18,6 @@ class CharitiesController < ApplicationController
     end
   end
 
-# 1. Suche erfolgreich -> Suche anzeigen no flash
-# 2. Suche nicht erfolgreich -> Flash + alle Charities anzeigen
-# 3. Suche nach nichts. Sofort mit klick auf button alle Charities anzeigen ohne flash
-
-# 1. params[:query].present?
-# => if true does query.empty?
-# =>    if true query was unsuccessful
-# =>    if false normal query
-# => if false Charity.all
-# 2.
 
   def show
     set_client
