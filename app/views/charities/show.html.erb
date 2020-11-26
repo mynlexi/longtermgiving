@@ -17,7 +17,10 @@
 <br>
   <%= render 'shared/stock_card' %>
 <%# still need to connect the closing numbers to the choices%>
-<% @bars.each do |key, value|  %>
-  <%= value[0].close %>
-  <% end  %> 
+<%if !@choices[0].nil? %>
+  <% @bars.each do |key, value|  %>
+    <%= value[0].close %>
+    <% end  %> 
+<% else %>
+<% end %>
 
