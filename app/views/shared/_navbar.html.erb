@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to "/", class: "navbar-brand" do %>
-    <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606389481/LGT_full_logo_V5_he7goa.svg" %>
+    <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606397727/LGT_full_logo_V7_c5ng1p.svg" %>
     <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,11 +17,10 @@
         <li class="nav-item active">
           <%= link_to "Charities", "/charities", class: "nav-link" %>
         </li>
+        <li><%= link_to "log-out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </li>
         <li class="nav-item">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
+          <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606391510/search_gdqujp.svg", class: "search-icon"%>
         </li>
       <% else %>
         <li class="nav-item">
