@@ -1,26 +1,40 @@
-<h1>Favourites</h1>
-<% @favourites.each do |favourite| %>
-    <ul>
-        <li>
-            <%= favourite.charity.name %>
-        </li>
-    </ul>
-<% end %>
 
-<h1>History</h1>
-<% @donations.each do |donation| %>
-    <ul>
-        <li>
-            <%= donation.charity.name %>
-        </li>
-        <li>
-            <%= donation.asset.stock_symbol %>
-        </li>
-        <li>
-            <%= donation.quantity %>
-        </li>
-        <li>
-            <%= donation.order_status %>
-        </li>
-    </ul>
-<% end %>
+<div class="container-favourites">
+  <h1>Favourites</h1>
+  <% @favourites.each do |favourite| %>
+      <ul>
+          <li>
+              <%= favourite.charity.name %>
+          </li>
+      </ul>
+  <% end %>
+</div>
+
+
+<div class="container-history">
+  <h1>History</h1>
+    <div>
+      <% @donations.each do |donation| %>
+          <ul>
+            <li>
+                  <%= donation.created_at.to_date %>
+              </li>
+              <li>
+                  <%= donation.charity.name %>
+              </li>
+              <li>
+                  <%= donation.asset.stock_symbol %>
+              </li>
+              <li>
+                  <%= donation.quantity %>
+              </li>
+              <li>
+                  <%= donation.donation_amount %>
+              </li>
+              <li>
+                  <%= donation.order_status %>
+              </li>
+          </ul>
+      <% end %>
+    </div>
+</div>
