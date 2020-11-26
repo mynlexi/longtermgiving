@@ -1,0 +1,47 @@
+.back-btn {
+    position: relative;
+    width: 128.67px;
+    height: 46px;
+    left: 45px;
+    top: 97px;
+
+    background: #FFFAFF;
+    border: 2px solid #D96C06;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.back-btn .back-btn-arrow {
+    position: absolute;
+    left: 20px;
+    top: 16px;
+
+    border: solid #D96C06;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3.5px;
+
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.back-btn .back-btn-text {
+    position: absolute;
+    width: 72px;
+    height: 20px;
+    left: 45px;
+    top: 10px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 20px;
+    /* identical to box height */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 3px;
+    
+    color: #D96C06;
+}
