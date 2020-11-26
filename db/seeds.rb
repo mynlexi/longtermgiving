@@ -11,8 +11,8 @@ require "open-uri"
 Donation.destroy_all
 Favourite.destroy_all
 CharitysChoice.destroy_all
-User.destroy_all
 Charity.destroy_all
+User.destroy_all
 
 
 puts "creating users"
@@ -57,7 +57,7 @@ puts "creating charities /w pics"
   Charity.create!(name: "Memorial Sloan Kettering Cancer Center", category: "Cancer Research", description: "Memorial Sloan Kettering Cancer Center (MSK)—the world's oldest and largest private cancer center—has devoted more than 130 years to exceptional patient care, innovative research, and outstanding educational programs. Today, it is one of 49 National Cancer Institute–designated Comprehensive Cancer Centers, with state-of-the-art science flourishing side by side with clinical studies and treatment. The close collaboration between MSK's physicians and scientists is one of its unique strengths, enabling it to provide patients with the best care available as researchers work to discover more effective strategies to prevent, control, and ultimately cure cancer in the future. MSK's education programs train future physicians and scientists, and the knowledge and experience they gain makes an impact on cancer treatment and biomedical research around the world. ")
   Charity.last.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
-  file = URI.open('https://www.charities.org/sites/default/files/styles/logo/public/LDF-logo-web.jpg?itok=r6KnQ7Jr')
+  file = URI.open('https://www.charities.org/sites/default/files/styles/logo/public/JA-of-New-York-LOGO.jpg?itok=ZZ_qTsDb')
   Charity.create!(name: "Junior Achievement of New York", category: "Education", description: "Impart a solid grasp of our how our economy works through lessons relevant to students' life experience
     Prepare students to understand the opportunities and rewards that exist in a changing global marketplace
     Foster students' desire to complete their education and invest in their own human capital

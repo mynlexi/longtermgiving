@@ -1,48 +1,57 @@
-<!-- bannersection  -->
-  <div class="banner">
-<br>
-<br>
-<%= form_tag charities_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find your charity"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
+<!-- bannersection  --> 
+<div class="wrapper">
+  <div class="container-fluid first inner flex" >
+      <div class="banner">
+    <br>
+    <%= form_tag charities_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find your charity!"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
 
-</div>
+    </div>
+  </div>
 
-<br>
-<br>
-<!-- charities  -->
-<div class="container">
-  <br>
-  <%= link_to charities_path do %>
-    <h3>See all charities</h3>
-  <% end %>
-  <br>
-  <div class="px-5 pt-5 mt-5">
-    <div class="row px-1 pb-5 justify-content-around">
-      <% Charity.all.each do |charity| %>
-        <div class="pb-5 border">
-          <div class="col-12 col-xl-3 col-lg-4 clo-md-6">
-            <%#= link_to charity_path(charity) do %>
-            <div class="card-charity">
-              <div>
-               <!-- card-logo here -->
-              </div>
-              <div class="card-charity-info justify-content-between">
-                  <h3><%= charity.name %></h3>
-                  <h4><%= charity.category %></h4>
-                  <%= cl_image_tag charity.photo.key, height: 300, width: 400, crop: :fill %>
-                 <!--  <%#= link_to button %>
-                  <%#= link_to button %> -->
-              </div>
-            </div>
+
+  <div class="container-fluid second inner flex">
+    <div>
+      <p>- Problem: Charities need to spend most on their ressources on fundraising</p>
+      <br>
+      <p>- We want more Charities, but the competition for Attention drives cost up for everybody</p>
+      <br>
+      <p>- By donating an asset forever, instead of repeated donations to smooth out the charities fundraising</p>
+      <br>
+      <p>- By having a predictable income-stream charities can concentrate on what they do best</p>
+    </div>
+  </div>
+
+  <div class="container-fluid third inner flex">
+
+    <div class="container flex"> 
+      <div class="border charity-card-container ">
+        <div class="charity-logo">
+        <% charity =  Charity.find(5) %>
+           <%= cl_image_tag charity.photo.key, height: 171, width: 222, crop: :pad %>
+        </div>
+        <div class="charity-text-box">
+          <div class="header-3">
+            <%= charity.name %>
+          </div>
+          <div class="category pt-3">
+            <%= charity.category %>
           </div>
         </div>
-      <% end %>
+      </div>
+      <div class="container example">
+       <h2>On of our Partner Charities:</h2>
+      <h4>The JA of New York uses equity founding to specifically combat systemic education inequality and deeply rooted issues that can not simply be resolved by a short-term project.</h4>
+        <p>Donations received over the Long Term Giving platform will directly benefit a permanently open workshop were children from challenged backgrounds can experience an uplifting and save the atmosphere.  Here the children have access to a wide array of different learning-mediums, information regarding education paths and scholarships and can partake in frequent contests, that cherish learning, succeeding and not giving up.</p>
+        <p>The contest range from Spelling Bees, over hackatons to Integration Bees and are open for all local contestants of all grades. </p>
+      </div>
+      </div>
     </div>
   </div>
 </div>

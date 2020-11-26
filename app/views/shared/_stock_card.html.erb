@@ -1,0 +1,23 @@
+<% @choices.each do |choice| %>
+  <div class="stock-card-container">
+    <div class="header-stock-symbol">
+      <%= choice.asset.stock_symbol %>
+    </div>
+    <div class="stock-type">
+        <%= choice.asset.asset_type %>
+    </div>
+    <div class="stock-description-box">
+        <div class="stock-description">
+        <%= choice.asset.description %>
+        </div>
+    </div>
+    <%= link_to new_charity_donation_path(charity_id: choice.charity.id, asset_id: choice.asset.id) do %>
+        <div class="donation-btn">
+            <div class="donate-text">
+            Donate
+            </div>
+        </div>
+    <% end %>
+    <%= render 'shared/info_btn', choice: choice %>
+  </div>
+<% end %>

@@ -1,0 +1,57 @@
+.footer {
+  background: #040F0F;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0px 50px;
+  color: #FFFBFF;
+  font-size: 27px;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: #FFFBFF;
+  opacity: 0.5;
+  text-decoration: none;
+  font-size: 27px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer .fa-heart {
+  color: #D23333;
+}
+
+.footer-copyright {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  opacity: 0.9;
+  color: #FFFBFF;
+}
+
+.long-term-giving {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #FFFBFF;
+  opacity: 0.5;
+  font-size: 27px;
+}
+
+.long-term-giving:hover {
+  text-decoration: none;
+  color: #FFFBFF;
+  opacity: 1;
+}

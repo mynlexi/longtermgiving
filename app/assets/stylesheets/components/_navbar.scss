@@ -1,6 +1,34 @@
+.navbar {
+  padding-top: 0.1rem;
+  padding-bottom: 0;
+  padding-left: 0.5rem;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 0px 10px;
+  z-index: 1;
+}
+
+.nav-link {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+
+  color: #FFFBFF!important;
+
+  &:hover {
+    color: #FD7E15!important;
+    transition: color 0.3s ease-in-out;
+  }
+}
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #040F0F;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,5 +36,10 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  height: 64px;
+}
+
+.fa-search {
+  color: $orange-figma;
+  
 }
