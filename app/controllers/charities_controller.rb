@@ -5,15 +5,29 @@ class CharitiesController < ApplicationController
   skip_after_action :verify_policy_scoped
 
   def index
-    params[:query].present?
-    sql_query = "name @@ :query OR category @@ :query OR description @@ :query"
-    @charities = Charity.where(sql_query, query: "%#{params[:query]}%")
-
-    if @charities.empty?
+    if params[:query].present?
+      sql_query = "name @@ :query OR category @@ :query OR description @@ :query"
+      @charities = Charity.where(sql_query, query: "%#{params[:query]}%")
+      if @charities.empty?
+        @charities = Charity.all
+        flash[:notice] = "Sorry, search was not successful"
+      end
+    else
       @charities = Charity.all
-      flash[:notice] = "Sorry, search was not successful"
+      flash[:notice] = "You searched for nothing, so we gave you everything"
     end
   end
+
+# 1. Suche erfolgreich -> Suche anzeigen no flash
+# 2. Suche nicht erfolgreich -> Flash + alle Charities anzeigen
+# 3. Suche nach nichts. Sofort mit klick auf button alle Charities anzeigen ohne flash
+
+# 1. params[:query].present?
+# => if true does query.empty?
+# =>    if true query was unsuccessful
+# =>    if false normal query
+# => if false Charity.all
+# 2.
 
   def show
     set_client
