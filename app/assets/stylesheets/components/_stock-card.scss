@@ -2,8 +2,8 @@
     position: relative;
     width: 939px;
     height: 258px;
-    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 53.65%, rgba(255, 255, 255, 0) 100%), radial-gradient(53.1% 93.81% at 50% 50%, #0FA3B1 9.38%, rgba(15, 163, 177, 0.51) 69.79%);
-    opacity: 0.3;
+    background: radial-gradient(50% 50% at 50% 50%, #ffffffe5 54.65%, rgba(255, 255, 255, 0.7) 100%), radial-gradient(110.1% 93.81% at 79% 89%, #0FA3B1 9.38%, rgba(15, 163, 177, 2.51) 104.79%);
+
     border: 1px solid #1B4963;
     box-sizing: border-box;
     box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.25);
@@ -25,7 +25,6 @@
     align-items: center;
     text-align: center;
     letter-spacing: 1px;
-
     color: #000000;
 }
 
@@ -93,4 +92,43 @@
     letter-spacing: 3px;
 
     color: #FFFAFF;
+}
+
+.stock-card-container .btn-info {
+    position: absolute;
+    left: 85.52%;
+    right: 3.43%;
+    top: 68.22%;
+    bottom: 13.95%;
+    
+    background: #FFFBFF;
+    border: 2px solid #0FA3B1;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.stock-card-container .btn-info a {
+    text-decoration: none;
+    color: #0FA3B1;
+}
+
+.stock-card-container .btn-info .info-text {
+    position: absolute;
+    width: 42px;
+    height: 20px;
+    left: calc(50% - 42px/2 + 0.12px);
+    top: calc(50% - 20px/2);
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 3px;
+
 }
