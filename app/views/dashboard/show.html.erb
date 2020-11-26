@@ -1,40 +1,23 @@
 
 <div class="container-favourites">
   <h1>Favourites</h1>
-  <% @favourites.each do |favourite| %>
-      <ul>
-          <li>
-              <%= favourite.charity.name %>
-          </li>
-      </ul>
+  <%  a = @favourites.map do |favourite| %>
+    <% favourite.charity %>
   <% end %>
+    <%= render 'shared/charity_card', charities: a %>
 </div>
 
 
-<div class="container-history">
-  <h1>History</h1>
-    <div class="history-cards display-inlign">
-      <% @donations.each do |donation| %>
-          <ul>
-            <li>
-                  <%= donation.created_at.to_date %>
-              </li>
-              <li>
-                  <%= donation.charity.name %>
-              </li>
-              <li>
-                  <%= donation.asset.stock_symbol %>
-              </li>
-              <li>
-                  <%= donation.quantity %>
-              </li>
-              <li>
-                  <%= donation.donation_amount %>
-              </li>
-              <li>
-                  <%= donation.order_status %>
-              </li>
-          </ul>
-      <% end %>
-    </div>
-</div>
+<h1>History</h1>
+  <div class="container-history">
+    <% @donations.reverse.each do |donation| %>
+      <div class="history-card">
+       | <%= donation.created_at.to_date %> |
+        <%= donation.charity.name %>
+        <%= donation.asset.stock_symbol %> |
+        <%= donation.quantity %> |
+        <%= donation.donation_amount %> |
+        <%= donation.order_status %> |
+      </div>
+    <% end %>
+  </div>
