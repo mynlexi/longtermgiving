@@ -24,7 +24,6 @@ class DonationsController < ApplicationController
     @donation.user = current_user
     @donation.asset = @asset    
     @donation.charity = @charity
-    @donation.symbol = @symbol
     @order = @client.new_order(
       symbol: @symbol, 
       side: 'buy',
