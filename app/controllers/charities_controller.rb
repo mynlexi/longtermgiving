@@ -1,6 +1,6 @@
 require 'alpaca/trade/api'
 class CharitiesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index, :show ]
+  skip_before_action :authenticate_user!, only: [:index, :show]
   skip_after_action :verify_authorized
   skip_after_action :verify_policy_scoped
 
@@ -14,10 +14,8 @@ class CharitiesController < ApplicationController
       end
     else
       @charities = Charity.all
-      flash[:notice] = "You searched for nothing, so we gave you everything"
     end
   end
-
 
   def show
     set_client
@@ -28,7 +26,7 @@ class CharitiesController < ApplicationController
       @choices.each do |choice|
         @symbols << choice.asset.stock_symbol
       end
-      #connect these to choices
+      # connect these to choices
       @bars = @client.bars("5Min", @symbols, limit: 1)
     else
       @bars = [1, 2, 3, 4]
@@ -36,6 +34,6 @@ class CharitiesController < ApplicationController
   end
 
   def set_client
-    @client =  Alpaca::Trade::Api::Client.new
+    @client = Alpaca::Trade::Api::Client.new
   end
 end
