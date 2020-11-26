@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 .wrapper {
   height: 100%;
@@ -25,4 +26,9 @@
 
 .third {
   background-color: $white;
+}
+
+.example {
+  max-width: 66%;
+  
 }
