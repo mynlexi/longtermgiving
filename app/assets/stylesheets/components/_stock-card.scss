@@ -94,41 +94,6 @@
     color: #FFFAFF;
 }
 
-.stock-card-container .btn-info {
-    position: absolute;
-    left: 85.52%;
-    right: 3.43%;
-    top: 68.22%;
-    bottom: 13.95%;
-    
-    background: #FFFBFF;
-    border: 2px solid #0FA3B1;
-    box-sizing: border-box;
-    border-radius: 5px;
-}
-
-.stock-card-container .btn-info a {
-    text-decoration: none;
-    color: #0FA3B1;
-}
-
-.stock-card-container .btn-info .info-text {
-    position: absolute;
-    width: 42px;
-    height: 20px;
-    left: calc(50% - 42px/2 + 0.12px);
-    top: calc(50% - 20px/2);
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    /* identical to box height */
-
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    letter-spacing: 3px;
-
+.stock-card-container {
+    @import "info-btn";
 }
