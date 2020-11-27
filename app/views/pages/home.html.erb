@@ -1,4 +1,4 @@
-<!-- bannersection  --> 
+<!-- bannersection  -->
 <div class="wrapper">
   <div class="container-fluid first inner flex" >
       <div class="banner">
@@ -30,10 +30,10 @@
 
   <div class="container-fluid third inner flex">
 
-    <div class="container flex"> 
+    <div class="container flex">
       <div class="border charity-card-container ">
         <div class="charity-logo">
-        <% charity =  Charity.find(5) %>
+        <% charity = Charity.find(5) %>
            <%= cl_image_tag charity.photo.key, height: 171, width: 222, crop: :pad %>
         </div>
         <div class="charity-text-box">
