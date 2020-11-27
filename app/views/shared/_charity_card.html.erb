@@ -2,11 +2,9 @@
 <div class="px-5 pt-5 mt-5">
     <div class="row px-1 pb-5 justify-content-left">
       <% charities.each do |charity| %>
-        <%= link_to charity_path(charity) do %>
           <div class="pb-5 col-sm-6 col-md-4 ">
             <div class="border charity-card-container ">
-
-              <% if current_user %>
+              <% if user_signed_in? %>
                 <div class="heart-icon">
                   <% if !@favourites.find_by(charity_id: charity.id).nil? %>
                       <% @favourite = @favourites.find_by(charity_id: charity.id)  %>
@@ -18,23 +16,26 @@
                   <% end %>
                 </div>
               <% end %>
-              <div class="charity-logo">
-                <%= cl_image_tag charity.photo.key, height: 171, width: 222, crop: :pad %>
-              </div>
-              <div class="charity-text-box">
-                <div class="header-3">
-                  <%= charity.name %>
+              <div>
+                <%= link_to charity_path(charity) do %>
+                <div class="charity-logo">
+                  <%= cl_image_tag charity.photo.key, height: 171, width: 222, crop: :pad %>
                 </div>
-                <div class="category pt-3">
-                  <%= charity.category %>
+                <div class="charity-text-box">
+                  <div class="header-3">
+                    <%= charity.name %>
+                  </div>
+                  <div class="category pt-3">
+                    <%= charity.category %>
+                  </div>
                 </div>
-              </div>
-              <div class="donation">
-                Donate
+                <div class="donation">
+                  Donate
+                </div>
               </div>
             </div>
           </div>
         <% end %>
       <% end %>
     </div>
-  </div>
+</div>
