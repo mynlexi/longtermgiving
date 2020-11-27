@@ -73,7 +73,7 @@ puts "creating charitys choices"
   CharitysChoice.create!(charity_id: 2, asset_id: 4)
   CharitysChoice.create!(charity_id: 2, asset_id: 5)
   CharitysChoice.create!(charity_id: 3, asset_id: 6)
-  CharitysChoice.create!(charity_id: 3, asset_id:7)
+  CharitysChoice.create!(charity_id: 3, asset_id: 7)
   CharitysChoice.create!(charity_id: 3, asset_id: 1)
   CharitysChoice.create!(charity_id: 4, asset_id: 8)
   CharitysChoice.create!(charity_id: 4, asset_id: 2)
@@ -82,15 +82,15 @@ puts "creating charitys choices"
 puts "creating favourits"
 
   Favourite.create!(charity_id: 1, user_id: 1)
-  Favourite.create!(charity_id: 1, user_id: 3)
-  Favourite.create!(charity_id: 1, user_id: 2)
-  Favourite.create!(charity_id: 1, user_id: 2)
-  Favourite.create!(charity_id: 1, user_id: 3)
   Favourite.create!(charity_id: 2, user_id: 1)
-  Favourite.create!(charity_id: 3, user_id: 3)
-  Favourite.create!(charity_id: 3, user_id: 2)
   Favourite.create!(charity_id: 4, user_id: 1)
   Favourite.create!(charity_id: 5, user_id: 1)
+  Favourite.create!(charity_id: 5, user_id: 1)
+  Favourite.create!(charity_id: 1, user_id: 2)
+  Favourite.create!(charity_id: 3, user_id: 2)
+  Favourite.create!(charity_id: 4, user_id: 2)
+  Favourite.create!(charity_id: 1, user_id: 3)
+  Favourite.create!(charity_id: 3, user_id: 3)
 
 
 puts "creating donation"
