@@ -5,6 +5,16 @@
         <%= link_to charity_path(charity) do %>
           <div class="pb-5 col-sm-6 col-md-4 ">
             <div class="border charity-card-container ">
+            <div class="heart-icon">
+              <% if !@favourites.find_by(charity_id: charity.id).nil? %>
+                  <% @favourite = @favourites.find_by(charity_id: charity.id)  %>
+                  <%= render "shared/fav_button" %>
+              <% else %>
+                  <%= link_to favourites_path(charity_id: charity.id), method: :create, :class=> "you_class" do %>
+                  <i class="far fa-heart" aria-hidden="true" target="_blank"></i>
+                  <% end %> 
+              <% end %>
+            </div>
               <div class="charity-logo">
                 <%= cl_image_tag charity.photo.key, height: 171, width: 222, crop: :pad %>
               </div>
