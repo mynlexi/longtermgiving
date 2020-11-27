@@ -83,3 +83,12 @@ color: #000000;
     width: 260px;
 }
 
+.heart-icon {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    .fa-heart {
+       color: #D96C06; 
+    }
+    
+}

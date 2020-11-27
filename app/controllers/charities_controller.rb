@@ -16,6 +16,7 @@ class CharitiesController < ApplicationController
       @charities = Charity.all
       flash[:notice] = "You searched for nothing, so we gave you everything"
     end
+    @favourites = current_user.favourites
   end
 
 
