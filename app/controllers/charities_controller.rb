@@ -15,6 +15,7 @@ class CharitiesController < ApplicationController
     else
       @charities = Charity.all
     end
+    @favourites = current_user.favourites
   end
 
   def show
