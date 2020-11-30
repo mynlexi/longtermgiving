@@ -17,12 +17,7 @@ class DonationsController < ApplicationController
   # new needs asset-price
   #params?
   def create
-
-    @bars = @client.bars("5Min",[@symbol], limit: 1)
-    @price = @bars[@symbol][0].close.round
-    @amount = @price
-    @state = 'pending'
-
+    
     @asset = Asset.find(params[:donation][:asset_id])
     @symbol = @asset.stock_symbol
     @quantity = params[:donation][:quantity]
@@ -39,6 +34,13 @@ class DonationsController < ApplicationController
       time_in_force:"day"
     )
     @donation.order_id =  @client.orders(status: "all").first.id
+
+    @symbol = @asset.stock_symbol
+    @bars = @client.bars("5Min",[@symbol], limit: 1)
+    @price = @bars[@symbol][0].close.round
+    
+    @amount = @price
+    @state = 'pending'
     authorize @donation
     if @donation.save
       session = Stripe::Checkout::Session.create(
@@ -50,12 +52,12 @@ class DonationsController < ApplicationController
           currency: 'eur',
           quantity: @quantity
         }],
-        success_url: donation_url(@donation),
-        cancel_url: donation_url(@donation)
+        success_url: "https://www.longtermgiving.trade/dashboard",
+        cancel_url: "https://www.longtermgiving.trade/dashboard"
       )
 
       @donation.update(checkout_session_id: session.id)
-      redirect_to new_donation_payment_path(donation)
+      redirect_to new_charity_donation_payment_path(@charity, @donation)
       # redirect_to dashboard_path
     else
       redirect_to charity_path(@charity)
