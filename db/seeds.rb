@@ -164,9 +164,9 @@ puts "creating charities /w pics"
     Charity.last.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
     file = URI.open('https://www.charities.org/sites/default/files/styles/logo/public/Tuberous-Sclerosis-Alliance_logo_Charity%20Profile%20Logos%20_%20Images_Tuberous%20Sclerosis%20Alliance_Logo.jpg?itok=dg_JDk_L')
-  charity8 =Charity.create!(name: "Tuberous Sclerosis Alliance", category: "Health", description: "<h3>The Tuberous Sclerosis Alliance (TS Alliance) is the only national voluntary health 
+  charity8 =Charity.create!(name: "Tuberous Sclerosis Alliance", category: "Health", description: "<h4>The Tuberous Sclerosis Alliance (TS Alliance) is the only national voluntary health 
   organization for the genetic disorder known as tuberous sclerosis complex (TSC). It is also the leading organization for the funding of medical research related to TSC. 
-  Such medical research has included the breakthrough discovery of two genes (TSC1 and TSC2) that are known to cause the disorder.</h3>
+  Such medical research has included the breakthrough discovery of two genes (TSC1 and TSC2) that are known to cause the disorder.</h4>
 
     <p>The TS Alliance was established in 1974 as the National Tuberous Sclerosis Association (NTSA), which it remained titled until 2000. Four mothers 
     of children with TSC founded the organization in order to provide fellowship, generate awareness, pursue more knowledge and provide hope to those who share the 
