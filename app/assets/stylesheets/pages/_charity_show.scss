@@ -39,24 +39,4 @@
   position: relative;
 }
 
-.text {
-    height: 175px;
-    overflow: hidden;
-}
 
-label {
-    position: absolute;
-    top: 100%;
-}
-input {
-    display: none;
-}
-label:after {
-    content: "Show More";
-}
-input:checked + label:after {
-    content: "Show Less";
-}
-input:checked ~ div {
-    height: 100%;
-}

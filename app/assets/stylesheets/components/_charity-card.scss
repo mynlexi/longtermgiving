@@ -92,3 +92,24 @@ color: #000000;
     }
     
 }
+.text {
+    height: 175px;
+    overflow: hidden;
+}
+
+.showmore {
+    position: absolute;
+    top: 100%;
+}
+.showmore_input {
+    display: none;
+}
+.showmore:after {
+    content: "Show More";
+}
+.showmore_input:checked + .showmore:after {
+    content: "Show Less";
+}
+.showmore_input:checked ~ div {
+    height: 100%;
+}
