@@ -299,7 +299,7 @@ puts "creating favourits"
   Favourite.create!(charity_id: charity2.id, user_id: user1.id)
   Favourite.create!(charity_id: charity4.id, user_id: user1.id)
   Favourite.create!(charity_id: charity5.id, user_id: user1.id)
-  Favourite.create!(charity_id: charity5.id, user_id: user1.id)
+  Favourite.create!(charity_id: charity8.id, user_id: user1.id)
   Favourite.create!(charity_id: charity1.id, user_id: user2.id)
   Favourite.create!(charity_id: charity10.id, user_id: user2.id)
   Favourite.create!(charity_id: charity4.id, user_id: user2.id)

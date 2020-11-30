@@ -10,7 +10,7 @@
                       <% @favourite = @favourites.find_by(charity_id: charity.id)  %>
                       <%= render "shared/fav_button" %>
                   <% else %>
-                      <%= link_to favourites_path(charity_id: charity.id), method: :create, :class=> "you_class" do %>
+                      <%= link_to favourites_path(charity_id: charity.id), method: :post, :class=> "you_class" do %>
                       <i class="far fa-heart" aria-hidden="true" target="_blank"></i>
                       <% end %>
                   <% end %>
