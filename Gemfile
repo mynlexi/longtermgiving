@@ -70,3 +70,5 @@ gem 'cloudinary', '~> 1.16.0'
 gem 'alpaca-trade-api'
 
 gem 'money-rails'
+
+gem 'stripe'
