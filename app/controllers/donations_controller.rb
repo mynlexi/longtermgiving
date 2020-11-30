@@ -17,6 +17,9 @@ class DonationsController < ApplicationController
   # new needs asset-price
   #params?
   def create
+
+
+    
     @asset = Asset.find(params[:donation][:asset_id])
     @symbol = @asset.stock_symbol
     @quantity = params[:donation][:quantity]

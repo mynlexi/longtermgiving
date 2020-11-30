@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_30_085432) do
+ActiveRecord::Schema.define(version: 2020_11_30_113605) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2020_11_30_085432) do
     t.string "asset_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "price_cents", default: 0, null: false
   end
 
   create_table "charities", force: :cascade do |t|
@@ -75,7 +76,6 @@ ActiveRecord::Schema.define(version: 2020_11_30_085432) do
     t.string "order_status", default: "New"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "price_cents", default: 0, null: false
     t.index ["asset_id"], name: "index_donations_on_asset_id"
     t.index ["charity_id"], name: "index_donations_on_charity_id"
     t.index ["user_id"], name: "index_donations_on_user_id"
