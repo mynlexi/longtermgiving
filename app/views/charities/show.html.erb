@@ -15,7 +15,13 @@
       <%= @charity.category %>
     </div>
     <div class="carity-show-paragraph">
-      <%= @charity.description %>
+
+      
+    </div>
+    <div class="container">
+      <input id="ch" type="checkbox">
+      <label for="ch"></label>
+      <div class="text"><%= sanitize @charity.description %></div>
     </div>
   </div>
 </div>
