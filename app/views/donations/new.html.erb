@@ -1,8 +1,10 @@
 <%= simple_form_for([@charity, @donation]) do |f| %>
-  <%=@price%>
-  <%= f.input :quantity, input_html: { min: 1 } %>
+  <span id='currentAssetPrice'> <%=@price%> </span>
+  <%= f.input :quantity, input_html: { min: 1, value: 1 } %>
   <%= f.input :asset_id, as: :hidden, :input_html => { :value => @asset.id } %>
-  <%= f.input :donation_amount %>
-  <%#= check for donation amount > price*quantity %>
+  <%#= f.input :donation_amount %>
   <%= f.submit "Submit", disable_with: 'Submiting...' %>
 <% end %>
+  <h3>total Price:</h3>
+<p id="totalerPrice"> here it comes </p>
+
