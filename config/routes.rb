@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :charities, only: [:show, :index] do
-    resources :donations, only: [:new, :create]
+    resources :donations, only: [:new, :create] do
+      resources :payments, only: :new
+    end
   end
   
   get "/dashboard", to: "dashboard#show"

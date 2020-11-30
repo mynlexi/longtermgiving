@@ -18,12 +18,16 @@ class DonationsController < ApplicationController
   #params?
   def create
 
+    @bars = @client.bars("5Min",[@symbol], limit: 1)
+    @price = @bars[@symbol][0].close.round
+    @amount = @price
+    @state = 'pending'
 
-    
     @asset = Asset.find(params[:donation][:asset_id])
     @symbol = @asset.stock_symbol
     @quantity = params[:donation][:quantity]
     @donation = Donation.new(donation_params)
+    @amount = params[:donation][:donation_amount]
     @donation.user = current_user
     @donation.asset = @asset    
     @donation.charity = @charity
@@ -37,7 +41,22 @@ class DonationsController < ApplicationController
     @donation.order_id =  @client.orders(status: "all").first.id
     authorize @donation
     if @donation.save
-      redirect_to dashboard_path
+      session = Stripe::Checkout::Session.create(
+        payment_method_types: ['card'],
+        line_items: [{
+          name: @charity.name,
+          # images: [@charity.photo_url],
+          amount: @amount,
+          currency: 'eur',
+          quantity: @quantity
+        }],
+        success_url: donation_url(@donation),
+        cancel_url: donation_url(@donation)
+      )
+
+      @donation.update(checkout_session_id: session.id)
+      redirect_to new_donation_payment_path(donation)
+      # redirect_to dashboard_path
     else
       redirect_to charity_path(@charity)
       # add flash notifaction that something went wrong
