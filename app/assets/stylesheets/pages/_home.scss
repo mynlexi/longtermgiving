@@ -19,7 +19,7 @@ body {
 
 }
 .inner {
-  // min-height: 850px;
+  // for scrolling to bottom
 }
 
 
@@ -43,7 +43,7 @@ body {
 
 .fourth {
   background-color: $background-orange;
-  min-height: 75vh;
+  min-height: 93vh;
 }
 
 .example {
@@ -51,9 +51,6 @@ body {
 }
 
 
-.half {
-  min-height: 650px;
-}
 
 @keyframes fade-in {
   from {opacity: 0; transform: scale(.7,.7)}
@@ -66,6 +63,9 @@ animation: fade-in 1s ease forwards;
   opacity: 0;
 }
 
+.smaller img{
+  size: 95%;
+}
 
 .banner {
 
@@ -83,3 +83,35 @@ animation: fade-in 1s ease forwards;
   z-index: 1001;
 }
 
+.arrow-button{
+  height: 56px;
+  width: 56px;
+  bottom: -25px;
+  left: 50%;
+  margin: 0 0 50px -28px;
+  background: rgba(34,34,34,0.35);
+  visibility: visible;
+  position: fixed;
+  z-index: 500;
+  cursor: pointer;
+  background-size: 24px;
+  border-radius: 100%;
+  transition: all .15s ease-out;
+  &:hover {
+    height: 70px;
+    width: 70px;
+    margin: 0 0 38px -35px;
+    background: rgba(34,34,34,0.5);
+  }
+  img {
+    height: 24px;
+    width: 24px;
+    top: 50%;
+    left: 50%;
+    margin: -12px;
+    position: absolute;
+
+    
+  }
+  
+}

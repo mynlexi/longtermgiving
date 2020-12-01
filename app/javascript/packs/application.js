@@ -26,6 +26,7 @@ require("channels")
 import "bootstrap";
 import { totalPrice } from "./totalprice";
 import { scroll_input } from "./scroll";
+import { arrowScroll } from "./arrow";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -35,4 +36,8 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   totalPrice;
   scroll_input();
+});
+
+document.getElementById("arrow").addEventListener("click", () =>  {
+  arrowScroll();
 });
