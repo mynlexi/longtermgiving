@@ -26,6 +26,7 @@ body {
 // overflow: hidden
 // give body height, then give min-height 100% in the children
 .first {
+  z-index: -100!important;
   background-color: $gray;
   display: flex;
 }
@@ -42,3 +43,18 @@ body {
   max-width: 66%;
 }
 
+.banner {
+
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.search-field {
+  position: absolute;
+  width: 20%;
+  top: 40%;
+  left: 40%; 
+
+}
