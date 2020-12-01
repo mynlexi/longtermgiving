@@ -1,7 +1,19 @@
 <!-- bannersection  -->
-<div class="container-fluid first inner flex" >
-  <div class="wrapper">
+
+<div class="wrapper">
+  <div class="container-fluid first flex" >
     <div class="animation">
+      <div class="search-field">
+        <%= form_tag charities_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find your charity!"
+          %>
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+
       <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s1" %>
       <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s2" %>
       <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s3" %>
@@ -11,6 +23,7 @@
       <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s7" %>
       <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s8" %>
       <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s9" %>
+
       <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s10" %>
       <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s11" %>
       <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s12" %>
@@ -22,16 +35,6 @@
       <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s18" %>
     </div>
   </div>
-  <div class="search-container flex">
-    <div class="search-field">
-      <%= form_tag charities_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find your charity!"
-        %>
-        <%= submit_tag "Search", class: "btn btn-primary" %>
-      <% end %>
     </div>
   </div>
 </div>

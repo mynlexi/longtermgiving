@@ -1,53 +1,65 @@
-.animation-swing {
-  transform: translateX(0%);
-    height: 110%;
-    margin: 0 auto;
-    margin-top: -10%;
-    width: auto;
-    max-width: 100%;
-    animation: slide 15s linear infinite alternate;
-    position: absolute;
-    opacity: 0;
+// .wrapper {
+//     position: relative;
+//     height: 900px!important;
+// }
 
+.animation {
+    height: 93vh;
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.animation-swing {
+    z-index: 100;
+    height: 88vh;
+    top: 0px;
+    margin: 0 auto;
+    animation: slide 12s linear infinite alternate;
+    position: absolute;
+    opacity: 0.5;
+    
     @keyframes slide {
-      0% {
-        transform: translateX(0%);
-        opacity: 0;
-      }
-      100% {
-          opacity: 1;
-          transform: translateX(calc(100vw - 30%));
-      }
+        from { 
+            left: 0px;
+            opacity: 0;
+        }
+        to { 
+            left: 50%;
+            opacity: 1;
+        }
     }
 }
 
 
 .s1 {
-    animation-delay: -3.7s;
+    animation-delay: -8.5s;
 }
 .s2 {
-    animation-delay: -3s;
+    animation-delay: -7.5s;
 }
 .s3 {
-    animation-delay: -2.3s;
+    animation-delay: -6.5s;
 }
 .s4 {
-    animation-delay: -1.6s;
+    animation-delay: -5.5s;
 }
 .s5 {
-    animation-delay: -0.9s;
+    animation-delay: -4.5s;
 }
 .s6 {
-    animation-delay: -0.2s;
+    animation-delay: -3.5s;
 }
 .s7 {
-    animation-delay: 0.5s;
+    animation-delay: -2.5s;
 }
 .s8 {
-    animation-delay: 1.2s;
+    animation-delay: -1.5s;
 }
 .s9 {
-    animation-delay: 1.9s;
+    animation-delay: -0.5s;
 }
 .s10 {
     animation-delay: 2.6s;
