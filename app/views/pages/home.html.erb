@@ -1,6 +1,6 @@
 <!-- bannersection  -->
 
-<div class="wrapper">
+<div>
   <div class="container-fluid first flex" >
     <div class="animation">
       <div class="search-field">
@@ -30,9 +30,6 @@
   
     </div>
   </div>
-    </div>
-  </div>
-</div>
 
 
   <div class="container-fluid second inner ">
@@ -61,8 +58,8 @@
     <div class="container flex">
       <div class="border charity-card-container hidden">
         <div class="charity-logo">
-        <% charity = Charity.find_by(name: "Junior Achievement of New York") %>
-           <%= cl_image_tag charity.photo.key, height: 171, width: 222, crop: :pad %>
+          <% charity = Charity.find_by(name: "Junior Achievement of New York") %>
+          <%= cl_image_tag charity.photo.key, height: 171, width: 222, crop: :pad %>
         </div>
         <div class="charity-text-box">
           <div class="header-3">
@@ -88,14 +85,8 @@
     <div class="p-2">
       <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606752744/homepage/Complited_Solution_mptnom.png" %>
     </div>
+  </div>
 </div>
-
-
-
-
-
-
-
 
 
 
