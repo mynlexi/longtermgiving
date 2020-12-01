@@ -1,14 +1,14 @@
 <div class="viewheight">
   <div class="form-wrapper">
     <%= simple_form_for([@charity, @donation]) do |f| %>
-      <span id='currentAssetPrice'> <%=@price%> </span>
-      <%= f.input :quantity, input_html: { min: 1, value: 1 } %>
-      <%= f.input :asset_id, as: :hidden, :input_html => { :value => @asset.id } %>
-      <%#= f.input :donation_amount %>
-      <%= f.submit "Submit", disable_with: 'Submiting...' %>
-    <% end %>
+        <span id='currentAssetPrice'> <%=@price%></span>€
+        <%= f.input :quantity, input_html: { min: 1, value: 1 } %>
+        <%= f.input :asset_id, as: :hidden, :input_html => { :value => @asset.id } %>
+        <%#= f.input :donation_amount %>
+        <%= f.submit "Submit", disable_with: 'Submiting...' %>
+      <% end %>
       <h3>total Price:</h3>
-    <p id="totalerPrice"> here it comes </p>
+    <p id="totalerPrice"> <%=@price%>€ </p>
   </div>
 </div>
 

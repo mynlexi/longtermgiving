@@ -38,7 +38,6 @@ class DonationsController < ApplicationController
     @symbol = @asset.stock_symbol
     @bars = @client.bars("5Min",[@symbol], limit: 1)
     @price = @bars[@symbol][0].close.round
-    
     @amount = @price
     @state = 'pending'
     authorize @donation
@@ -48,14 +47,14 @@ class DonationsController < ApplicationController
         line_items: [{
           name: @charity.name,
           # images: [@charity.photo_url],
-          amount: @amount,
+          amount: @amount * 100,
           currency: 'eur',
           quantity: @quantity
         }],
         success_url: "https://www.longtermgiving.trade/dashboard",
         cancel_url: "https://www.longtermgiving.trade/dashboard"
       )
-
+      @donation.amount = @price * @quantity.to_i
       @donation.update(checkout_session_id: session.id)
       redirect_to new_charity_donation_payment_path(@charity, @donation)
       # redirect_to dashboard_path
