@@ -1,6 +1,7 @@
 // Specific CSS for your home-page
 
 body {
+  color: $light-gray;
   padding-top: 76px;
   background-color: $background-orange;
 }
@@ -22,12 +23,7 @@ body {
   // min-height: 850px;
 }
 
-.form-wrapper {
-  margin: 0 33vw;
-}
 
-// overflow: hidden
-// give body height, then give min-height 100% in the children
 .first {
   z-index: -100!important;
   background-color: $gray;

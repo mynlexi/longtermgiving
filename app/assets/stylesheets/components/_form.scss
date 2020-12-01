@@ -1,0 +1,27 @@
+.form-login {
+    background: rgba(4,15,15,0.9);
+    padding: 10px 20px;
+    margin-top: 50px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    h2 {
+      color: $light-gray;
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .btn {
+      width: 100%;
+      margin-bottom: 20px;
+      background: $orange;
+    }
+    a {
+        color: $orange;
+    }
+  }
+
+.viewheight {
+    height: calc(100vh - 156px);
+  }
+  
