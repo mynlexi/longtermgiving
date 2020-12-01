@@ -1,0 +1,34 @@
+  <div class="pb-5 col-sm-6 col-md-4 ">
+    <div class="border charity-card-container ">
+      <% if user_signed_in? %>
+        <div class="heart-icon">
+          <% if !@favourites.find_by(charity_id: charity.id).nil? %>
+              <% @favourite = @favourites.find_by(charity_id: charity.id)  %>
+              <%= render "shared/fav_button" %>
+          <% else %>
+              <%= link_to favourites_path(charity_id: charity.id), method: :post, :class=> "you_class" do %>
+              <i class="far fa-heart" aria-hidden="true" target="_blank"></i>
+              <% end %>
+          <% end %>
+        </div>
+      <% end %>
+      <div>
+        <%= link_to charity_path(charity) do %>
+        <div class="charity-logo">
+          <%= cl_image_tag charity.photo.key, height: 171, width: 222, crop: :pad %>
+        </div>
+        <div class="charity-text-box">
+          <div class="header-3">
+            <%= charity.name %>
+          </div>
+          <div class="category pt-3">
+            <%= charity.category %>
+          </div>
+        </div>
+        <div class="donation">
+          Donate
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

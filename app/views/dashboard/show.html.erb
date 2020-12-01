@@ -1,68 +1,30 @@
 
 <div class="container-favourites">
-  <h1>Your Favourite Charitys</h1>
-  <%  favchar = @favourites.map do |favourite| %>
-    <% favourite.charity %>
-  <% end %>
-  <% if favchar.empty? %>
+  <h1>Your Favourite Charities</h1>
+
+  <% if @favchar.empty? %>
     <p> Here you can add your favourite charities </p>
   <% else %>
     <div class="px-5 pt-5 mt-5">
       <div class="row px-1 pb-5 justify-content-center">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleControls" class="carousel slide w-50" data-ride="carousel">
           <div class="carousel-inner">
-            <% favchar.each do |charity| %>
-              <% if favchar.first == charity %>
-                <div class="carousel-item active">
-              <% else %>
-                <div class="carousel-item">
-              <% end %>
-                <div class="pb-5 col-sm-6 col-md-4">
-                  <div class="d-block border charity-card-container">
-                    <% if user_signed_in? %>
-                      <div class="heart-icon">
-                        <% if !@favourites.find_by(charity_id: charity.id).nil? %>
-                          <% @favourite = @favourites.find_by(charity_id: charity.id)  %>
-                          <%= render "shared/fav_button" %>
-                        <% else %>
-                          <%= link_to favourites_path(charity_id: charity.id), method: :post, :class=> "you_class" do %>
-                          <i class="far fa-heart" aria-hidden="true" target="_blank"></i>
-                          <% end %>
-                        <% end %>
-                      </div>
-                    <% end %>
-                    <div>
-                      <%= link_to charity_path(charity) do %>
-                        <div class="charity-logo">
-                          <%= cl_image_tag charity.photo.key, height: 171, width: 222, crop: :pad %>
-                        </div>
-                        <div class="charity-text-box">
-                          <div class="header-3">
-                            <%= charity.name %>
-                          </div>
-                          <div class="category pt-3">
-                            <%= charity.category %>
-                          </div>
-                        </div>
-                        <div class="donation">
-                          Donate
-                        </div>
-                      <% end %>
-                    </div>
-                  </div>
-                </div>
+            <% @favchar.each_with_index do |charity, index| %>
+              <% class_name = index.zero? ? "carousel-item active" : "carousel-item" %>
+              <div class="<%= class_name %>">
+                <%= render "shared/single_charity_card", charity: charity %>
               </div>
             <% end %>
           </div>
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
       </div>
     </div>
   <% end %>
