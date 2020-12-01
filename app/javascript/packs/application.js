@@ -24,7 +24,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import { totalPrice } from "./totalprice";
+import { updateTotalPrice } from "./totalprice";
 import { scroll_input } from "./scroll";
 
 // Internal imports, e.g:
@@ -33,6 +33,6 @@ import { scroll_input } from "./scroll";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  totalPrice;
+  updateTotalPrice();
   scroll_input();
 });
