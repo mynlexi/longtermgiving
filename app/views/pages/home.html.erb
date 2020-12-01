@@ -1,48 +1,67 @@
 <!-- bannersection  -->
-<div class="wrapper">
-  <div class="animation">
-    <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s1" %>
-    <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s2" %>
-    <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s3" %>
-    <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s4" %>
-    <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s5" %>
-    <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s6" %>
-    <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s7" %>
-    <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s8" %>
-    <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s9" %>
+<div class="container-fluid first inner flex" >
+  <div class="wrapper">
+    <div class="animation">
+      <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s1" %>
+      <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s2" %>
+      <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s3" %>
+      <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s4" %>
+      <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s5" %>
+      <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s6" %>
+      <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s7" %>
+      <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s8" %>
+      <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s9" %>
+      <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s10" %>
+      <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s11" %>
+      <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s12" %>
+      <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s13" %>
+      <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s14" %>
+      <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s15" %>
+      <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s16" %>
+      <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s17" %>
+      <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s18" %>
+    </div>
   </div>
-  <div class="container-fluid first inner flex" >
-      <div class="banner">
-    <br>
-    <%= form_tag charities_path, method: :get do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Find your charity!"
-      %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
-    <% end %>
+  <div class="search-container flex">
+    <div class="search-field">
+      <%= form_tag charities_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find your charity!"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
+
+  <div class="container-fluid second inner ">
+    <div class="flex border-bottom half ">
+      <div class="container-fluid mt-5 n">
+        <h3 class="hidden">explanation why charity bad</h3>
+        <p class="hidden">Charities are in a viscious cycle of raising funds, which they then have to spend to a large part on the next years fund-raising.</p>
+      </div>
+      <div class="container-fluid mt-4">
+        <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606752553/homepage/long_term_funding_a5wuxf.png", class: "hidden" %>
+      </div>
+    </div>
+    <div class="flex half">
+      <div class="container-fluid mt-4 hidden">
+       <h3 class="hidden">why our platform good</h3>
+       <p class="hidden">With our platform you can donate just as easy but twice as smart.</p>
+      </div>
+      <div class="container-fluid mt-4 hidden">
+       <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606752216/homepage/Easy_solution_oul8zb.png", class: "hidden" %>
+      </div>
     </div>
   </div>
 
-
-  <div class="container-fluid second inner flex">
-    <div>
-      <p>- Problem: Charities need to spend most on their ressources on fundraising</p>
-      <br>
-      <p>- We want more Charities, but the competition for Attention drives cost up for everybody</p>
-      <br>
-      <p>- By donating an asset forever, instead of repeated donations to smooth out the charities fundraising</p>
-      <br>
-      <p>- By having a predictable income-stream charities can concentrate on what they do best</p>
-    </div>
-  </div>
-
-  <div class="container-fluid third inner flex">
+  <div class="container-fluid third inner flex hidden">
 
     <div class="container flex">
-      <div class="border charity-card-container ">
+      <div class="border charity-card-container hidden">
         <div class="charity-logo">
         <% charity = Charity.find_by(name: "Junior Achievement of New York") %>
            <%= cl_image_tag charity.photo.key, height: 171, width: 222, crop: :pad %>
@@ -65,6 +84,12 @@
       </div>
     </div>
   </div>
+
+  <div class="container fourth flex-column hidden">
+    <h3 class="p-2 text-center">What happens behind the scenes</h3>
+    <div class="p-2">
+      <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606752744/homepage/Complited_Solution_mptnom.png" %>
+    </div>
 </div>
 
 

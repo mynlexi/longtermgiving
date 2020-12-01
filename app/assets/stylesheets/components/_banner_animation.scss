@@ -1,22 +1,22 @@
 .animation-swing {
-  transform: translateX(-10%);
+  transform: translateX(0%);
     height: 110%;
     margin: 0 auto;
-    margin-top: -12%;
+    margin-top: -10%;
     width: auto;
     max-width: 100%;
-    animation: slide 12s linear infinite alternate;
+    animation: slide 15s linear infinite alternate;
     position: absolute;
-    opacity: 0.5;
+    opacity: 0;
 
     @keyframes slide {
       0% {
-        transform: translateX(-10%);
+        transform: translateX(0%);
         opacity: 0;
       }
       100% {
           opacity: 1;
-          transform: translateX(calc(100vw - 20%));
+          transform: translateX(calc(100vw - 30%));
       }
     }
 }
@@ -49,3 +49,31 @@
 .s9 {
     animation-delay: 1.9s;
 }
+.s10 {
+    animation-delay: 2.6s;
+}
+.s11 {
+    animation-delay: 3.3s;
+}
+.s12 {
+    animation-delay: 4s;
+}
+.s13 {
+    animation-delay: 4.7s;
+}
+.s14 {
+    animation-delay: 5.4s;
+}
+.s15 {
+    animation-delay: 6.1s;
+}
+.s16 {
+    animation-delay: 6.7s;
+}
+.s17 {
+    animation-delay: 7.4s;
+}
+.s18 {
+    animation-delay: 8.1s;
+}
+
