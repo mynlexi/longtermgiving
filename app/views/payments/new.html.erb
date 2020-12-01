@@ -1,11 +1,12 @@
 <div id="center-this" class="viewheight">
-    <div class="container">
-        <div class="pt-5"><%= image_tag @donation.charity.photo, height: 330, width: 350, crop: :pad%></div>
-            <div class="center">
-                <h1>Checkout summary</h1>
-                <h5>Purchase <strong><%= @donation.asset.stock_symbol %></strong> for <strong><%= @donation.charity.name %></strong> for <strong><%= humanized_money_with_symbol @donation.amount %></strong></h3>
+  <div class="form-wrapper">
+      <div class="container">
+          <div class="pt-5"><%= image_tag @donation.charity.photo, height: 330, width: 350, crop: :pad%></div>
+              <div class="center">
+                  <h1>Checkout summary</h1>
+                  <h5>Purchase <strong><%= @donation.asset.stock_symbol %></strong> for <strong><%= @donation.charity.name %></strong> for <strong><%= humanized_money_with_symbol @donation.amount %></strong></h3>
 
-                <button id="pay" class="btn btn-primary">Pay</button>
+                  <button id="pay" class="btn btn-primary">Pay</button>
 
                 <script src="https://js.stripe.com/v3/"></script>
                 <script>
@@ -20,4 +21,6 @@
             </div>
         </div>
     </div>
+  </div>
 </div> 
+
