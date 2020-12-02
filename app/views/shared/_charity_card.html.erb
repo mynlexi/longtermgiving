@@ -26,7 +26,22 @@
                     <%= charity.name %>
                   </div>
                   <div class="category pt-3">
-                    <%= charity.category %>
+                    <div class="icon-charity-category">
+                      <% if charity.category == 'Education' %>
+                      <i class="fas fa-book-open"></i>
+                      <% elsif charity.category == 'Animals' %>
+                      <i class="fas fa-paw"></i>
+                      <% elsif charity.category == 'Health' %>
+                      <i class="fas fa-heartbeat"></i>
+                      <% elsif charity.category == 'Cancer Research' %>
+                      <i class="fas fa-heartbeat"></i>
+                      <% elsif charity.category == 'Legal' %>
+                      <i class="fas fa-balance-scale-left"></i>
+                      <% else charity.category == 'Food' %>
+                      <i class="fas fa-utensils"></i>
+                      <% end %>
+                      <%= charity.category %>
+                    </div>
                   </div>
                 </div>
                 <div class="donation">
