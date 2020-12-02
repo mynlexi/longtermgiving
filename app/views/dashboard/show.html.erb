@@ -1,65 +1,66 @@
-<div class="container-dashboard">
-  <div class="container-favourites">
-    <% if flash[:notice] %>
-      <div class="notice"><%= flash[:notice] %></div>
-    <% end %>
-    <h3>Your Favourite Charities</h3>
-    <% if @favchar.empty? %>
-      <p> Here you can add your favourite charities </p>
-    <% else %>
-    <div class="row px-1 pb-5 justify-content-center">
-      <div id="carousel-favourites" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <% @favchar.each_with_index do |charity, index| %>
-            <% class_name = index.zero? ? "carousel-item active" : "carousel-item" %>
-            <div class="<%= class_name %>">
-              <%= render "shared/single_charity_card", charity: charity %>
-            </div>
-          <% end %>
+<div class="viewheight">
+  <div class="container-dashboard">
+    <div class="container-favourites">
+      <% if flash[:notice] %>
+        <div class="notice"><%= flash[:notice] %></div>
+      <% end %>
+      <h3>Your Favourite Charities</h3>
+      <% if @favchar.empty? %>
+        <p> Here you can add your favourite charities </p>
+      <% else %>
+      <div class="row px-1 pb-5 justify-content-center">
+        <div id="carousel-favourites" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <% @favchar.each_with_index do |charity, index| %>
+              <% class_name = index.zero? ? "carousel-item active" : "carousel-item" %>
+              <div class="<%= class_name %>">
+                <%= render "shared/single_charity_card", charity: charity %>
+              </div>
+            <% end %>
+          </div>
+          <a class="carousel-control-prev" href="#carousel-favourites" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel-favourites" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-        <a class="carousel-control-prev" href="#carousel-favourites" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel-favourites" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
     </div>
-  </div>
-  <% end %>
-  <div class="container-history">
-  <h3>Your History</h3>
-    <div class="wrap-table100">
-      <div class="tablever1">
-        <table>
-          <thead>
-            <tr class="table-header">
-              <th>Date</th>
-              <th>Name</th>
-              <th>Stock</th>
-              <th>Quantity</th>
-              <th>Amount</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody class="tablebody">
-            <% @donations.reverse.each do |donation| %>
-            <tr class="tabledata">
-              <td><%= donation.created_at.to_date %></td>
-              <td><%= donation.charity.name %></td>
-              <td><%= donation.asset.stock_symbol %></td>
-              <td><%= donation.quantity %></td>
-              <td><%= donation.donation_amount %></td>
-              <td><%= donation.order_status %></td>
-            </tr>
-          <% end %>
-          </tbody>
-        </table>
+    <% end %>
+    <div class="container-history">
+    <h3>Your History</h3>
+      <div class="wrap-table100">
+        <div class="tablever1">
+          <table>
+            <thead>
+              <tr class="table-header">
+                <th>Date</th>
+                <th>Name</th>
+                <th>Stock</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody class="tablebody">
+              <% @donations.reverse.each do |donation| %>
+              <tr class="tabledata">
+                <td><%= donation.created_at.to_date %></td>
+                <td><%= donation.charity.name %></td>
+                <td><%= donation.asset.stock_symbol %></td>
+                <td><%= donation.quantity %></td>
+                <td><%= donation.donation_amount %></td>
+                <td><%= donation.order_status %></td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
 
