@@ -6,7 +6,7 @@ const updateTotalPrice = () => {
         if (chosenAssetQuantity) {
             chosenAssetQuantity.addEventListener('change', () => {
                 let total = chosenAssetQuantity.value * currentAssetPrice
-                document.getElementById('totalerPrice').innerHTML = total + '€'
+                document.getElementById('totalerPrice').innerHTML = total + ',00€'
             });
         }
     }
