@@ -1,11 +1,9 @@
-
-
 <div class="container-dashboard">
   <div class="container-favourites">
     <% if flash[:notice] %>
       <div class="notice"><%= flash[:notice] %></div>
     <% end %>
-    <h1>Your Favourite Charities</h1>
+    <h3>Your Favourite Charities</h3>
     <% if @favchar.empty? %>
       <p> Here you can add your favourite charities </p>
     <% else %>
@@ -32,7 +30,7 @@
   </div>
   <% end %>
   <div class="container-history">
-  <h1>Your History</h1>
+  <h3>Your History</h3>
     <div class="wrap-table100">
       <div class="tablever1">
         <table>
@@ -41,7 +39,7 @@
               <th>Date</th>
               <th>Name</th>
               <th>Stock</th>
-              <th>Name</th>
+              <th>Quantity</th>
               <th>Amount</th>
               <th>Status</th>
             </tr>
