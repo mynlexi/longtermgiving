@@ -4,6 +4,19 @@
 }
 
 .container-favourites {
-  margin: 30px;
+  margin: 10px;
+  min-width: 45%;
+  min-height: auto;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+.container-history {
+  margin: 10px;
+  min-width: auto;
+  min-height: auto;
+  width: auto;
+  height: auto;
 }
 
