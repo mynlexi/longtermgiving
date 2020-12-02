@@ -5,5 +5,6 @@ class DashboardController < ApplicationController
     @favourites = current_user.favourites
     @donations = current_user.donations
     @favchar = @favourites.map { |favourite| favourite.charity }
+    @is_dashboard_page = true
   end
 end

@@ -1,4 +1,5 @@
-  <div class="pb-5 col-sm-6 col-md-4 ">
+  <% class_name = @is_dashboard_page.nil? ? 'pb-5 col-xl-12 col-sm-6 col-md-4 carousel-item-container' : 'carousel-item-container' %>
+  <div class="<%= class_name %>">
     <div class="border charity-card-container ">
       <% if user_signed_in? %>
         <div class="heart-icon">
