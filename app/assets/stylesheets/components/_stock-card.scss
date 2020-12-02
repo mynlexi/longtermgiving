@@ -1,75 +1,89 @@
 .stock-card-container {
     position: relative;
     width: 100%;
-    height: 258px;
-    background: radial-gradient(50% 50% at 50% 50%, #ffffffe5 54.65%, rgba(255, 255, 255, 0.7) 100%), radial-gradient(110.1% 93.81% at 79% 89%, #0FA3B1 9.38%, rgba(15, 163, 177, 2.51) 104.79%);
-
+    height: 120px;
+    background: radial-gradient(50% 50% at 50% 50%,  #232323e5 -16.35%, rgba(4, 15, 15, 0.9) 100%), radial-gradient(110.1% 93.81% at 79% 89%, #afc6c9 9.38%,  #7b65a6 104.79%);
     border: 1px solid #1B4963;
     box-sizing: border-box;
-    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px  rgba(4,15,15,0.2);
+    border-radius: 4px;
 }
 
 .stock-card-container .header-stock-symbol {
     position: absolute;
     left: 19px;
-    top: 14px;
-
+    top: 66px;
+    
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
     line-height: 37px;
-
+    
     display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: 1px;
-    color: #000000;
+    color: #FFFAFF;
 }
 
 .stock-card-container .stock-type {
     position: absolute;
-    left: 34px;
-    top: 69px;
-
+    left: 46%;
+    top: 40%;
+    
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
     line-height: 20px;
-
-    color: #444444;
+    
+    color: #ffffff;
 }
 
 .stock-card-container .stock-description-box {
     position: absolute;
     width: 518px;
     height: 105px;
-    left: 34px;
-    top: 119px;
+    left: 19px;
+    top: 20px;
 }
 
 .stock-card-container .stock-description-box .stock-description {
-    font-family: Montserrat;
+    // font-family: Open-Sans;
     font-style: normal;
-    font-weight: bold;
+    // font-weight: bold;
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 1px;
 
-    color: #000000;
+    color: #FFFAFF;
 }
 
-.stock-card-container .donation-btn {
-    position: absolute;
-    left: 81.26%;
-    right: 3.36%;
-    top: 12.79%;
-    bottom: 69.38%;
+.donation-btn {
 
-    background: radial-gradient(50% 50% at 50% 50%, #0FA3B1 0%, rgba(15, 163, 177, 0.4) 100%);
-    border-radius: 5px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    
+    font-family: Montserrat;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    /* identical to box height */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 3px;
+    justify-content: center;  
+    color: #FFFFFF;
+
+    background: $tile-figma;
+    border-radius: 3px;
+    height: 46px;
+    width: 160px;
 }
 
 .stock-card-container .donation-btn .donate-text {
