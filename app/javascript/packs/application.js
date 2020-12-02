@@ -36,8 +36,10 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   updateTotalPrice();
   scroll_input();
+  if (document.getElementById("arrow")) {
+    document.getElementById("arrow").addEventListener("click", () =>  {
+      arrowScroll();
+    });
+  }
 });
 
-document.getElementById("arrow").addEventListener("click", () =>  {
-  arrowScroll();
-});
