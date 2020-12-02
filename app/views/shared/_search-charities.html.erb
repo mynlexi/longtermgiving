@@ -1,0 +1,8 @@
+<%= form_tag charities_path, method: :get, class: 'form-inline search-charities d-flex' do %>
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control search-custom",
+    placeholder: "Find your charity!"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary btn-custom ml-2" %>
+<% end %>
