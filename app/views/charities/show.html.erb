@@ -11,9 +11,11 @@
     <div class="charity-show-name">
       <%= @charity.name %>
     </div>
+    <br>
     <div class="carity-show-category my-2">
       <%= @charity.category %>
     </div>
+    <br>
     <div class="carity-show-paragraph">
 
       
@@ -31,7 +33,8 @@
     <%= render 'shared/stock_card' %>
     <%if !@choices[0].nil? %>
       <% @bars.each do |key, value|  %>
-        <%= value[0].close %>
+      <%#= p key, value %>
+        <%#= value[0].close %>
       <% end  %> 
     <% end %>
   </div>
