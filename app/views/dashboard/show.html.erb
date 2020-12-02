@@ -2,6 +2,9 @@
 
 <div class="container-dashboard">
   <div class="container-favourites">
+    <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
     <h1>Your Favourite Charities</h1>
     <% if @favchar.empty? %>
       <p> Here you can add your favourite charities </p>
