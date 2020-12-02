@@ -27,11 +27,11 @@ puts "creating users"
 puts "creating assets"
 
   asset1 = Asset.create!(stock_symbol: "AAPL", description: "Appels stock", asset_type: "Stock")
-  asset2 =Asset.create!(stock_symbol: "QQQ", description: "Invescos ETF, the most diversified etf, that also outperformed the Nasdaq stock", asset_type: "ETF")
+  asset2 =Asset.create!(stock_symbol: "QQQ", description: "Invescos ETFoutperformed the Nasdaq stock", asset_type: "ETF")
   asset3 =Asset.create!(stock_symbol: "SPY", description: "SPDR S&P 500 ", asset_type: "ETF")
   asset4 =Asset.create!(stock_symbol: "GLD", description: "SPDR® Gold Shares", asset_type: "GOLD-ETF")
   asset5 =Asset.create!(stock_symbol: "YOLO", description: "AdvisorShares Pure Cannabis", asset_type: "ETF")
-  asset6 =Asset.create!(stock_symbol: "VEA", description: "Vanguard FTSE Developed Markets Index Fund ETF Shares", asset_type: "ETF")
+  asset6 =Asset.create!(stock_symbol: "VEA", description: "Vanguard FTSE Developed Markets Index Fund", asset_type: "ETF")
   asset7 =Asset.create!(stock_symbol: "VGK", description: "Vanguard FTSE Europe Index Fund ETF Shares", asset_type: "ETF")
   asset8 =Asset.create!(stock_symbol: "CORN", description: "Teucrium Corn Fund", asset_type: "ETF")
 

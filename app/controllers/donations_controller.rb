@@ -42,15 +42,22 @@ class DonationsController < ApplicationController
     @state = 'pending'
     authorize @donation
     if @donation.save
+      Stripe::File.create({
+       file: File.new('app/assets/images/LGT_full_logo_V10_phajvf (1).jpg'),
+       purpose: 'business_logo',
+      })
       session = Stripe::Checkout::Session.create(
         payment_method_types: ['card'],
+        # settings: {
+        #     logo: "null",
+        #   },
         line_items: [{
-          name: @charity.name,
+          name: "For " +@charity.name,
           images: [Cloudinary::Utils.cloudinary_url(@charity.photo.key)],
           amount: @amount * 100,
           currency: 'eur',
-          quantity: @quantity
-          
+          quantity: @quantity,
+          description: @symbol
         }],
           success_url: "https://www.longtermgiving.trade/dashboard",
           cancel_url: "https://www.longtermgiving.trade/dashboard"

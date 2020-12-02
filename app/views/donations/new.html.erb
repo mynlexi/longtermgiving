@@ -1,14 +1,30 @@
 <div class="viewheight">
-  <div class="form-wrapper">
-    <%= simple_form_for([@charity, @donation]) do |f| %>
-        <span id='currentAssetPrice'> <%=@price%></span>€
-        <%= f.input :quantity, input_html: { min: 1, value: 1 } %>
-        <%= f.input :asset_id, as: :hidden, :input_html => { :value => @asset.id } %>
-        <%#= f.input :donation_amount %>
-        <%= f.submit "Submit", disable_with: 'Submiting...' %>
-      <% end %>
-      <h3>total Price:</h3>
-    <p id="totalerPrice"> <%=@price%>€ </p>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xs-10 col-sm-8 col-md-6 col-lg-4 col-sm-offset-4">
+        <div class="form-login">
+          <br>
+          <h2 class="text-center">How many Assets do you want to donate?</h2>
+          <br>
+          <!-- Insert form here -->
+          <%= simple_form_for([@charity, @donation]) do |f| %>
+            <div class="form-inputs text-gray">
+              <span>current Price/Asset:</span><strong><span id='currentAssetPrice'> <%=@price%></span>,00€</strong>
+              <br>
+              <br>
+              <%= f.input :quantity, input_html: { min: 1, value: 1 } %>
+              <%= f.input :asset_id, as: :hidden, :input_html => { :value => @asset.id } %>
+              <%#= f.input :donation_amount %>
+              <br>
+              <h3>total Price:</h3>
+              <h2 id="totalerPrice"> <%=@price%>,00€ </h2>
+            </div>
+            <div class="form-actions">
+              <%= f.button :submit, "Donate" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
