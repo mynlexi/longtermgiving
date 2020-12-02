@@ -31,7 +31,8 @@
     <%= render 'shared/stock_card' %>
     <%if !@choices[0].nil? %>
       <% @bars.each do |key, value|  %>
-        <%= value[0].close %>
+      <%#= p key, value %>
+        <%#= value[0].close %>
       <% end  %> 
     <% end %>
   </div>

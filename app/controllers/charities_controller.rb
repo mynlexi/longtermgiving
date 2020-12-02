@@ -32,6 +32,7 @@ class CharitiesController < ApplicationController
     else
       @bars = [1, 2, 3, 4]
     end
+    
   end
 
   def set_client
