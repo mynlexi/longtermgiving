@@ -7,7 +7,22 @@
           <h2 class="text-center">How many Assets do you want to donate?</h2>
           <br>
           <!-- Insert form here -->
-          <%= simple_form_for([@charity, @donation]) do |f| %>
+          <script src="https://js.stripe.com/v3/"></script>
+          <div id="stripe-data" data-checkout-session-id="" class="d-none">
+            <button id="pay"></button>
+          </div>
+          <script>
+              const paymentButton = document.getElementById('pay');
+              paymentButton.addEventListener('click', () => {
+                const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+                const sessionId = document.getElementById("stripe-data").dataset.checkoutSessionId
+                stripe.redirectToCheckout({
+                    sessionId: sessionId
+                });
+              });
+          </script>
+
+          <%= simple_form_for([@charity, @donation], remote: true) do |f| %>
             <div class="form-inputs text-gray">
               <span>current Price/Asset:</span><strong><span id='currentAssetPrice'> <%=@price%></span>,00€</strong>
               <br>
