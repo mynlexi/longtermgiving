@@ -1,16 +1,18 @@
 <!-- bannersection  -->
 
+
 <div class="wrapper">
   <div class="container-fluid first inner flex" >
+
     <div class="animation">
-      <div class="search-field">
+      <div class="search-field form-inline">
         <%= form_tag charities_path, method: :get do %>
           <%= text_field_tag :query,
             params[:query],
-            class: "form-control",
+            class: "form-control search-custom",
             placeholder: "Find your charity!"
           %>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
+          <%= submit_tag "Search", class: "btn btn-primary btn-custom" %>
         <% end %>
       </div>
 
@@ -30,12 +32,14 @@
 
     </div>
   </div>
+
     </div>
   </div>
 </div>
   <a class="arrow-button" id="arrow">
     <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606823562/homepage/arrow_c7qeee.svg" %>
   </a>
+
 
   <div class="container-fluid second inner flex ">
 
@@ -55,8 +59,8 @@
     <div class="container flex">
       <div class="border charity-card-container hidden">
         <div class="charity-logo">
-        <% charity = Charity.find_by(name: "Junior Achievement of New York") %>
-           <%= cl_image_tag charity.photo.key, height: 171, width: 222, crop: :pad %>
+          <% charity = Charity.find_by(name: "Junior Achievement of New York") %>
+          <%= cl_image_tag charity.photo.key, height: 171, width: 222, crop: :pad %>
         </div>
         <div class="charity-text-box">
           <div class="header-3">
@@ -93,14 +97,8 @@
         <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606752744/homepage/Complited_Solution_mptnom.png", class: "hidden" %>
       </div>
     </div>
+  </div>
 </div>
-
-
-
-
-
-
-
 
 
 

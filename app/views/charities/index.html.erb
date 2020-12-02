@@ -4,16 +4,16 @@
     <h3>Back to Home</h3>
   <% end %>
   <br>
-  <div>
-    <%= form_tag charities_path, method: :get do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Find your charity"
-      %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
-    <% end %>
-  </div>
+       <div class="form-inline search-charity d-flex">
+        <%= form_tag charities_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control search-custom",
+            placeholder: "Find your charity!"
+          %>
+          <%= submit_tag "Search", class: "btn btn-primary btn-custom" %>
+        <% end %>
+      </div>
 
   <%= render 'shared/charity_card', charities: @charities %>
 </div>

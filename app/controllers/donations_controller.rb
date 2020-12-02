@@ -46,13 +46,14 @@ class DonationsController < ApplicationController
         payment_method_types: ['card'],
         line_items: [{
           name: @charity.name,
-          # images: [@charity.photo_url],
+          images: [Cloudinary::Utils.cloudinary_url(@charity.photo.key)],
           amount: @amount * 100,
           currency: 'eur',
           quantity: @quantity
+          
         }],
-        success_url: "https://www.longtermgiving.trade/dashboard",
-        cancel_url: "https://www.longtermgiving.trade/dashboard"
+          success_url: "https://www.longtermgiving.trade/dashboard",
+          cancel_url: "https://www.longtermgiving.trade/dashboard"
       )
       @donation.amount = @price * @quantity.to_i
       @donation.update(checkout_session_id: session.id)
