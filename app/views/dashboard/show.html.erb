@@ -1,8 +1,5 @@
 <div class="viewheight">
   <div class="container-dashboard">
-    <% if (Date.today.to_time-Donation.last.created_at)<= 3000 %>
-      <div class="notice"><%= flash[:notice] %></div>
-    <% end %>
     <div class="container-favourites">
       <h3>Your Favourite Charities</h3>
       <% if @favchar.empty? %>

@@ -6,6 +6,6 @@ class DashboardController < ApplicationController
     @donations = current_user.donations
     @favchar = @favourites.map { |favourite| favourite.charity }
     @is_dashboard_page = true
-    flash[:notice] = "Thank you for your donation"
+    # flash[:notice] = "Thank you for your donation"
   end
 end
