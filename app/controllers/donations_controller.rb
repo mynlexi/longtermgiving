@@ -45,12 +45,12 @@ class DonationsController < ApplicationController
       session = Stripe::Checkout::Session.create(
         payment_method_types: ['card'],
         line_items: [{
-          name: @charity.name,
+          name: "For " + @charity.name,
           images: [Cloudinary::Utils.cloudinary_url(@charity.photo.key)],
           amount: @amount * 100,
           currency: 'eur',
-          quantity: @quantity
-          
+          quantity: @quantity,
+          description: @symbol
         }],
           success_url: "https://www.longtermgiving.trade/dashboard",
           cancel_url: "https://www.longtermgiving.trade/dashboard"

@@ -1,9 +1,11 @@
 <!-- bannersection  -->
 
-<div>
-  <div class="container-fluid first flex" >
+
+<div class="wrapper">
+  <div class="container-fluid first inner flex" >
+
     <div class="animation">
-      <div class="search-field form-inline">
+      <div class="search-field search-charity d-flex form-inline">
         <%= form_tag charities_path, method: :get do %>
           <%= text_field_tag :query,
             params[:query],
@@ -27,30 +29,31 @@
       <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s10" %>
       <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s11" %>
       <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s12" %>
-  
+
     </div>
   </div>
 
+    </div>
+  </div>
+</div>
+  <a class="arrow-button" id="arrow">
+    <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606823562/homepage/arrow_c7qeee.svg" %>
+  </a>
 
-  <div class="container-fluid second inner ">
-    <div class="flex border-bottom half ">
-      <div class="container-fluid mt-5 n">
-        <h3 class="hidden">explanation why charity bad</h3>
-        <p class="hidden">Charities are in a viscious cycle of raising funds, which they then have to spend to a large part on the next years fund-raising.</p>
+
+  <div class="container-fluid second inner flex ">
+
+      <div class="container-fluid mt-5">
+        <h3 class="hidden">Standard fundraising only benefits the Tech-Megacorps, not the People</h3>
+        <p class="hidden">Most charities have to focus a large part of their resources on the continuous raising of funds to finance their operations.</p>
+        <p class="hidden">Additionally, most charities have to aggressively advertise in their competition with other non-profits,  creating more profit for the big advertisement Aggregators and leave less for their own good cause.</p>
+        <p class="hidden">With Long-Term-Giving, charities can focus on creating long-term projects with long-term impacts.</p>
       </div>
       <div class="container-fluid mt-4">
         <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606752553/homepage/long_term_funding_a5wuxf.png", class: "hidden" %>
       </div>
-    </div>
-    <div class="flex half">
-      <div class="container-fluid mt-4 hidden">
-       <h3 class="hidden">why our platform good</h3>
-       <p class="hidden">With our platform you can donate just as easy but twice as smart.</p>
-      </div>
-      <div class="container-fluid mt-4 hidden">
-       <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606752216/homepage/Easy_solution_oul8zb.png", class: "hidden" %>
-      </div>
-    </div>
+
+
   </div>
 
   <div class="container-fluid third inner flex hidden">
@@ -80,10 +83,22 @@
     </div>
   </div>
 
-  <div class="container fourth flex-column hidden">
-    <h3 class="p-2 text-center">What happens behind the scenes</h3>
-    <div class="p-2">
-      <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606752744/homepage/Complited_Solution_mptnom.png" %>
+  <div class="container fourth flex-column inner hidden">
+    <div class="flex border-bottom half ">
+      <div class="container-fluid mt-4 hidden">
+       <h3 class="hidden">Why should You use LTG to Give?</h3>
+       <p class="hidden">Charities should focus on where they are best. That's why we made the complicated stuff easy, and provide a plug-and-play solution for them.</p>
+       <p class="hidden">Donators can help charities in a more unique way by providing their market-insights giving them a more unique experience.</p>
+      </div>
+        <div class="container-fluid mt-4 hidden">
+          <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606833102/homepage/Easy_solution_piuire.png", class: "hidden" %>
+        </div>
+    </div>
+    <div class="flex half">
+      <h5 class="p-2 text-center">We make it look easy, but if you want more information what happens behind the scenes visit our github!</h5>
+      <div class="p-2 smaller">
+        <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606752744/homepage/Complited_Solution_mptnom.png", class: "hidden" %>
+      </div>
     </div>
   </div>
 </div>

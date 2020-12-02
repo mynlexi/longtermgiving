@@ -1,8 +1,9 @@
-.container-favourites p {
-  text-align: center;
-  padding: 10px;
+.container-dashboard {
+  display: flex;
+  width: 100%;
 }
 
-.carousel-control-prev {
-  padding-right: 50px;
+.container-favourites {
+  margin: 30px;
 }
+
