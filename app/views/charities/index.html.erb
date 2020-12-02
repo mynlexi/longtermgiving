@@ -1,11 +1,15 @@
 <div class="container">
   <br>
 
-  <div class="container w-50 mx-auto">
+  <div class="row">
+    <div class="mx-auto">
     <h3>Our Powerful Partners in disrupting non-Profit</h3>
+    </div>
+  </div>
     <br>
-    <div class="ml-1">
-      <div class="form-inline search-charity d-flex ml-5 pl-5">
+  <div class="row">
+    <div class="mx-auto">
+      <div class="form-inline search-charity d-flex">
         <%= form_tag charities_path, method: :get do %>
           <%= text_field_tag :query,
             params[:query],
