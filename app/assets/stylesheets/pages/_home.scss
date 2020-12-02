@@ -1,7 +1,6 @@
 // Specific CSS for your home-page
 
 body {
-  color: $light-gray;
   padding-top: 76px;
   background-color: $background-orange;
 }
@@ -81,6 +80,6 @@ animation: fade-in 1s ease forwards;
   width: 20%;
   top: 40%;
   left: 40%; 
-
+  z-index: 1001;
 }
 
