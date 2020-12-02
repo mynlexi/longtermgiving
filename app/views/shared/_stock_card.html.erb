@@ -3,6 +3,7 @@
     <div class="stock-description-box">
         <div class="stock-description">
         <%= choice.asset.description %>
+        <p><%= @bars[choice.asset.stock_symbol][0].close %> €</p>
         </div>
     </div>
     <div class="stock-type">
@@ -10,6 +11,9 @@
     </div>
     <div class="header-stock-symbol">
       <%= choice.asset.stock_symbol %>
+    </div>
+    <div>
+      
     </div>
     <%= link_to new_charity_donation_path(charity_id: choice.charity.id, asset_id: choice.asset.id) do %>
         <div class="donation-btn">
