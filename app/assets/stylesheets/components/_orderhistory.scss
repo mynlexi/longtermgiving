@@ -6,31 +6,24 @@ h3 {
 }
 
 .container-history {
-  margin: 30px;
-}
-
-.wrap-table100 {
-  background-color: #f4f4f2;
-  margin: 5px 20px;
-  padding: 5px 5px;
+  margin: 20px;
 }
 
 .tablever1 {
+  background-color: #f8f1f1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
 }
 
-.tabledata {
+.tabledata td {
   background-color: #FFFFFF;
   color: #1B4963;
   box-shadow: 2px 3px #cfd3ce;
   text-align: center;
   padding: 3px 3px;
-  margin: 2px 2px;
-  width: 100%;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 
@@ -38,5 +31,10 @@ h3 {
   text-align: center;
   opacity: 50%;
   color: #3797a4;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0px 5px;
 }
 
