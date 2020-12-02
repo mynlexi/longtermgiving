@@ -7,7 +7,14 @@
         </div>
     </div>
     <div class="stock-type">
-        <%= choice.asset.asset_type %>
+      <div class="icon-stock-type">
+        <% if choice.asset.asset_type == 'Stock' %>
+          <i class="fas fa-file-contract"></i>
+        <% else choice.asset.asset_type == 'ETF' %>
+          <i class="fas fa-layer-group"></i>
+        <% end %>
+      <%= choice.asset.asset_type %>
+      </div>
     </div>
     <div class="header-stock-symbol">
       <%= choice.asset.stock_symbol %>
