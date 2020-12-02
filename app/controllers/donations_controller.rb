@@ -57,9 +57,7 @@ class DonationsController < ApplicationController
       )
       @donation.amount = @price * @quantity.to_i
       @donation.update(checkout_session_id: session.id)
-      flash[:notice] = "Thank you for your donation"
       redirect_to new_charity_donation_payment_path(@charity, @donation)
-
       # redirect_to dashboard_path
     else
       flash[:notice] = "Terror, try again"
