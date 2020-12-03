@@ -250,6 +250,37 @@ puts "creating charities /w pics"
     
     <p>Learn more at curesearch.org.</p>")
     Charity.last.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+  
+    file = URI.open('https://images.tynker.com/blog/wp-content/uploads/tynker-logo-tagline.png')
+    charity11 =Charity.create!(name: "Tynker - Coding for Kids", category: "Education", description: 
+      "<h3>Tynker enables children to learn computer programming in a fun and imaginative way.</h3>
+  
+      <p>In a world where technology touches every aspect of our lives, it is crucial that our children become active creators of technology, not just passive users. We believe that the ability to code allows children to make their ideas a reality. Tynker's mission is to provide every child with solid foundations in Computer Science, programming, and critical thinking
+       skills to prepare them to become better architects of their future world.</p> 
+      <h5>Guided, Self-Paced Learning</h5>
+      <p>Kids learn on their own as they earn badges by completing game-like lessons.</p>
+      <h6>Step-by-Step Success</h6>
+      <p>Lessons are designed to guide kids on a path to earning cool new badges. In each lesson, kids engage with interactive learning modules, mini-games, coding projects, and puzzles.</p>
+      <h6>Interactive Approach</h6>
+      <p>Explanations:
+      Cool characters introduce code blocks and how to use them.</p>
+      <p>How-To Videos:
+      Short clips demonstrate common actions such as deleting Actors or changing the background.</p>
+      <p>Mini-Games
+      Preview the games you build in each lesson and play bonus games along the way.</p>
+      <h6>Guided Learning</h6>
+      <p>Kids learn on their own with a guided, hands-on approach that individualizes the learning experience.</p>
+      <p>Built-in Tutor:
+      Tutorials give step-by-step instructions that teach how to apply coding concepts so kids can complete projects without frustration.</p>
+      <p>Free Play Mode:
+      After completing a tutorial, kids can experiment with what they've built to help them apply the concepts they've learned.</p>
+      <h6>Start Visually, Move to Code</h6>
+      <p>Transition to Mainstream Languages:
+      With Tynker, students learn fundamental programming concepts and the principles of computational thinking. Once proficient, they can seamlessly transition to JavaScript coding within the Tynker learning system.</p>
+      <p>Not only can students switch between seeing their program in block view and code view in the Tynker Workshop, but they can also transition to coding in JavaScript with our new “Sky Pirates” course.</p>
+      
+      <p>Learn more at <a href='https://www.tynker.com/blog/'>.</p>")
+      Charity.last.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 
 
