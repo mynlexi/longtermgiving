@@ -63,6 +63,7 @@
 
 
     <div class="container flex hidden">
+    <% @favourites = current_user.favourites %>
     <% charity = Charity.find_by(name: "Tynker - Coding for Kids") %>
     <%= render "shared/single_charity_card", charity: charity %>
 
