@@ -3,7 +3,7 @@
     <div class="stock-description-box">
         <div class="stock-description">
         <%= choice.asset.description %>
-        <p><%= @bars[choice.asset.stock_symbol][0].close %> €</p>
+        <p><%= money_format(@bars[choice.asset.stock_symbol][0].close) %> €</p>
         </div>
     </div>
     <div class="stock-type">
