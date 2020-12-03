@@ -10,8 +10,7 @@ class DonationsController < ApplicationController
     @asset = Asset.find(params[:asset_id])
     @symbol = @asset.stock_symbol
     @bars = @client.bars("5Min",[@symbol], limit: 1)
-    @price = @bars[@symbol][0].close.round
-    
+    @price = @bars[@symbol][0].close.round(2)
   end
 
   # new needs asset-price
@@ -37,7 +36,7 @@ class DonationsController < ApplicationController
 
     @symbol = @asset.stock_symbol
     @bars = @client.bars("5Min",[@symbol], limit: 1)
-    @price = @bars[@symbol][0].close.round
+    @price = (@bars[@symbol].first.close * 100).round(2).to_i
     @amount = @price
     @state = 'pending'
     authorize @donation
@@ -47,7 +46,7 @@ class DonationsController < ApplicationController
         line_items: [{
           name: "For " + @charity.name,
           images: [Cloudinary::Utils.cloudinary_url(@charity.photo.key)],
-          amount: @amount * 100,
+          amount: @amount,
           currency: 'eur',
           quantity: @quantity,
           description: @symbol

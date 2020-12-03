@@ -6,7 +6,9 @@ const updateTotalPrice = () => {
         if (chosenAssetQuantity) {
             chosenAssetQuantity.addEventListener('change', () => {
                 let total = chosenAssetQuantity.value * currentAssetPrice
-                document.getElementById('totalerPrice').innerHTML = total + ',00€'
+                const price = Math.round((total + Number.EPSILON) * 100) / 100
+                document.getElementById('totalerPrice').innerHTML = `${price.toLocaleString("de-DE",  { style: 'currency', currency: 'EUR' })}`
+                 
             });
         }
     }
