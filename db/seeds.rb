@@ -253,69 +253,95 @@ puts "creating charities /w pics"
     <p>Learn more at curesearch.org.</p>")
     Charity.last.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   
-    file = URI.open('https://images.tynker.com/blog/wp-content/uploads/tynker-logo-tagline.png')
-    charity11 =Charity.create!(name: "Tynker - Coding for Kids", category: "Education", description: 
-      "<h3>Tynker enables children to learn computer programming in a fun and imaginative way.</h3>
-  
-      <p>In a world where technology touches every aspect of our lives, it is crucial that our children become active creators of technology, not just passive users. We believe that the ability to code allows children to make their ideas a reality. Tynker's mission is to provide every child with solid foundations in Computer Science, programming, and critical thinking
-       skills to prepare them to become better architects of their future world.</p> 
-      <h5>Guided, Self-Paced Learning</h5>
-      <p>Kids learn on their own as they earn badges by completing game-like lessons.</p>
+    
+    
+    file = URI.open('https://code.ngo/wp-content/uploads/2019/08/CODE-TaglineRightToRead-Colour_WEB.png')
+    charity12 =Charity.create!(name: "Code Promotion every child's right to read", category: "Education", description: 
+      "
+      
+      <p>We effect change by working in partnership with locally-based organizations (see Our Partners) who ensure the sustainability of programs and who provide a local voice and local expertise. We facilitate community participation, including stakeholders such as Ministries of Education, parent teacher associations and girls’ clubs, and academic partnerships. CODE collaborates with partners to develop locally appropriate solutions and then works with governments and institutional funders to scale-up change to a national level.</p> 
+      <h5>Our Programs</h5>
+      <p>Together with our partners, we have helped more than 10 million children gain access to better quality inclusive education and benefit from reading and writing in order to improve their lives and the lives of their families.</p>
       <h6>Step-by-Step Success</h6>
       <p>Lessons are designed to guide kids on a path to earning cool new badges. In each lesson, kids engage with interactive learning modules, mini-games, coding projects, and puzzles.</p>
-      <h6>Interactive Approach</h6>
-      <p>Explanations:
-      Cool characters introduce code blocks and how to use them.</p>
-      <p>How-To Videos:
-      Short clips demonstrate common actions such as deleting Actors or changing the background.</p>
-      <p>Mini-Games
-      Preview the games you build in each lesson and play bonus games along the way.</p>
-      <h6>Guided Learning</h6>
-      <p>Kids learn on their own with a guided, hands-on approach that individualizes the learning experience.</p>
-      <p>Built-in Tutor:
-      Tutorials give step-by-step instructions that teach how to apply coding concepts so kids can complete projects without frustration.</p>
-      <p>Free Play Mode:
-      After completing a tutorial, kids can experiment with what they've built to help them apply the concepts they've learned.</p>
-      <h6>Start Visually, Move to Code</h6>
-      <p>Transition to Mainstream Languages:
-      With Tynker, students learn fundamental programming concepts and the principles of computational thinking. Once proficient, they can seamlessly transition to JavaScript coding within the Tynker learning system.</p>
-      <p>Not only can students switch between seeing their program in block view and code view in the Tynker Workshop, but they can also transition to coding in JavaScript with our new “Sky Pirates” course.</p>
       
-      <p>Learn more at <a href=\"https://www.tynker.com/blog/\" target=\"_blank\"> Tynker</a>.</p>")
+      <p>CODE improves learning outcomes and educational opportunities for all girls and boys by working with like-minded organizations in three areas – Literacy Programs, Research Initiatives and Literary Awards.</p>
+      <p>coding</p>")
       Charity.last.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
-
-
-
-
-
-
-
-puts "creating charitys choices"
-
-CharitysChoice.create!(charity_id: charity1.id, asset_id: asset1.id)
-CharitysChoice.create!(charity_id: charity1.id, asset_id: asset3.id)
-CharitysChoice.create!(charity_id: charity1.id, asset_id: asset2.id)
-CharitysChoice.create!(charity_id: charity2.id, asset_id: asset1.id)
-CharitysChoice.create!(charity_id: charity2.id, asset_id: asset5.id)
-CharitysChoice.create!(charity_id: charity2.id, asset_id: asset4.id)
-CharitysChoice.create!(charity_id: charity3.id, asset_id: asset5.id)
-CharitysChoice.create!(charity_id: charity3.id, asset_id: asset6.id)
-CharitysChoice.create!(charity_id: charity3.id, asset_id: asset7.id)
-CharitysChoice.create!(charity_id: charity4.id, asset_id: asset8.id)
-CharitysChoice.create!(charity_id: charity4.id, asset_id: asset1.id)
-CharitysChoice.create!(charity_id: charity4.id, asset_id: asset2.id)
-CharitysChoice.create!(charity_id: charity5.id, asset_id: asset3.id)
-CharitysChoice.create!(charity_id: charity5.id, asset_id: asset4.id)
-CharitysChoice.create!(charity_id: charity5.id, asset_id: asset5.id)
-CharitysChoice.create!(charity_id: charity6.id, asset_id: asset1.id)
-CharitysChoice.create!(charity_id: charity6.id, asset_id: asset7.id)
-CharitysChoice.create!(charity_id: charity6.id, asset_id: asset8.id)
-CharitysChoice.create!(charity_id: charity7.id, asset_id: asset1.id)
-CharitysChoice.create!(charity_id: charity7.id, asset_id: asset2.id)
-CharitysChoice.create!(charity_id: charity7.id, asset_id: asset8.id)
-CharitysChoice.create!(charity_id: charity8.id, asset_id: asset3.id)
-CharitysChoice.create!(charity_id: charity8.id, asset_id: asset4.id)
-CharitysChoice.create!(charity_id: charity8.id, asset_id: asset5.id)
+      
+      file = URI.open('https://www.charities.org/sites/default/files/styles/logo_small/public/CEI%20logo.jpg?itok=c1le2L6K')
+      charity13 =Charity.create!(name: "Childhood Education International", category: "Education", description: 
+      "
+      
+      <p>Childhood Education International promotes innovative solutions to education challenges and inspires action that creates positive, sustainable futures for children and youth worldwide. We believe that children’s education is deeply intertwined with issues such as equality, justice, and human rights and that education is one of the most effective ways to support social and economic progress.</p> 
+      <br>
+      <p>CE International, formerly the Association for Childhood Education International, or ACEI, has been in operation since 1892. We have an esteemed history that covers 127 years, providing our organization with a great deal of knowledge, understanding, and perspective about children’s education worldwide.</p>
+      <p>Education Diplomacy is the key to tackling challenges such as poverty, gender equality, and health access by working across sectors, organizations, and even borders to overcome the challenges together. CE International’s innovative “5L Education Diplomacy Framework” offers valuable guidance for creating mutual understanding, cultivating collaboration, negotiating agreement, shaping consensus, and developing beneficial and innovative solutions for lasting change. The training provides the skills and tools to creatively solve problems and work cooperatively with multiple stakeholders at local, national, and international levels. </p>
+      <p>coding</p>")
+      Charity.last.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+      
+      
+      file = URI.open('https://images.tynker.com/blog/wp-content/uploads/tynker-logo-tagline.png')
+      charity11 =Charity.create!(name: "Tynker - Coding for Kids", category: "Education", description: 
+        "<h3>Tynker enables children to learn computer programming in a fun and imaginative way.</h3>
+    
+        <p>In a world where technology touches every aspect of our lives, it is crucial that our children become active creators of technology, not just passive users. We believe that the ability to code allows children to make their ideas a reality. Tynker's mission is to provide every child with solid foundations in Computer Science, programming, and critical thinking
+         skills to prepare them to become better architects of their future world.</p> 
+        <h5>Guided, Self-Paced Learning</h5>
+        <p>Kids learn on their own as they earn badges by completing game-like lessons.</p>
+        <h6>Step-by-Step Success</h6>
+        <p>Lessons are designed to guide kids on a path to earning cool new badges. In each lesson, kids engage with interactive learning modules, mini-games, coding projects, and puzzles.</p>
+        <h6>Interactive Approach</h6>
+        <p>Explanations:
+        Cool characters introduce code blocks and how to use them.</p>
+        <p>How-To Videos:
+        Short clips demonstrate common actions such as deleting Actors or changing the background.</p>
+        <p>Mini-Games
+        Preview the games you build in each lesson and play bonus games along the way.</p>
+        <h6>Guided Learning</h6>
+        <p>Kids learn on their own with a guided, hands-on approach that individualizes the learning experience.</p>
+        <p>Built-in Tutor:
+        Tutorials give step-by-step instructions that teach how to apply coding concepts so kids can complete projects without frustration.</p>
+        <p>Free Play Mode:
+        After completing a tutorial, kids can experiment with what they've built to help them apply the concepts they've learned.</p>
+        <h6>Start Visually, Move to Code</h6>
+        <p>Transition to Mainstream Languages:
+        With Tynker, students learn fundamental programming concepts and the principles of computational thinking. Once proficient, they can seamlessly transition to JavaScript coding within the Tynker learning system.</p>
+        <p>Not only can students switch between seeing their program in block view and code view in the Tynker Workshop, but they can also transition to coding in JavaScript with our new “Sky Pirates” course.</p>
+        
+        <p>Learn more at <a href=\"https://www.tynker.com/blog/\" target=\"_blank\"> Tynker</a>.</p>")
+        Charity.last.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+      
+      
+      
+      
+      
+      puts "creating charitys choices"
+      
+      CharitysChoice.create!(charity_id: charity1.id, asset_id: asset1.id)
+      CharitysChoice.create!(charity_id: charity1.id, asset_id: asset3.id)
+      CharitysChoice.create!(charity_id: charity1.id, asset_id: asset2.id)
+      CharitysChoice.create!(charity_id: charity2.id, asset_id: asset1.id)
+      CharitysChoice.create!(charity_id: charity2.id, asset_id: asset5.id)
+      CharitysChoice.create!(charity_id: charity2.id, asset_id: asset4.id)
+      CharitysChoice.create!(charity_id: charity3.id, asset_id: asset5.id)
+      CharitysChoice.create!(charity_id: charity3.id, asset_id: asset6.id)
+      CharitysChoice.create!(charity_id: charity3.id, asset_id: asset7.id)
+      CharitysChoice.create!(charity_id: charity4.id, asset_id: asset8.id)
+      CharitysChoice.create!(charity_id: charity4.id, asset_id: asset1.id)
+      CharitysChoice.create!(charity_id: charity4.id, asset_id: asset2.id)
+      CharitysChoice.create!(charity_id: charity5.id, asset_id: asset3.id)
+      CharitysChoice.create!(charity_id: charity5.id, asset_id: asset4.id)
+      CharitysChoice.create!(charity_id: charity5.id, asset_id: asset5.id)
+      CharitysChoice.create!(charity_id: charity6.id, asset_id: asset1.id)
+      CharitysChoice.create!(charity_id: charity6.id, asset_id: asset7.id)
+      CharitysChoice.create!(charity_id: charity6.id, asset_id: asset8.id)
+      CharitysChoice.create!(charity_id: charity7.id, asset_id: asset1.id)
+      CharitysChoice.create!(charity_id: charity7.id, asset_id: asset2.id)
+      CharitysChoice.create!(charity_id: charity7.id, asset_id: asset8.id)
+      CharitysChoice.create!(charity_id: charity8.id, asset_id: asset3.id)
+      CharitysChoice.create!(charity_id: charity8.id, asset_id: asset4.id)
+      CharitysChoice.create!(charity_id: charity8.id, asset_id: asset5.id)
 CharitysChoice.create!(charity_id: charity9.id, asset_id: asset6.id)
 CharitysChoice.create!(charity_id: charity9.id, asset_id: asset1.id)
 CharitysChoice.create!(charity_id: charity9.id, asset_id: asset2.id)
@@ -326,6 +352,13 @@ CharitysChoice.create!(charity_id: charity10.id, asset_id: asset2.id)
 CharitysChoice.create!(charity_id: charity11.id, asset_id: asset1.id)
 CharitysChoice.create!(charity_id: charity11.id, asset_id: asset4.id)
 CharitysChoice.create!(charity_id: charity11.id, asset_id: asset3.id)
+
+CharitysChoice.create!(charity_id: charity12.id, asset_id: asset1.id)
+CharitysChoice.create!(charity_id: charity12.id, asset_id: asset4.id)
+CharitysChoice.create!(charity_id: charity12.id, asset_id: asset3.id)
+CharitysChoice.create!(charity_id: charity13.id, asset_id: asset1.id)
+CharitysChoice.create!(charity_id: charity13.id, asset_id: asset4.id)
+CharitysChoice.create!(charity_id: charity13.id, asset_id: asset3.id)
 
 
 
