@@ -17,6 +17,8 @@ User.destroy_all
 
 puts "creating users"
 
+  thomas = User.create!(email: "thomas@example.com", password: "123456")
+
   user1 = User.create!(email: "user1@example.com", password: "123456")
   user2 =User.create!(email: "user2@example.com", password: "123456")
   user3 =User.create!(email: "user3@example.com", password: "123456")
@@ -201,7 +203,7 @@ puts "creating charities /w pics"
     Charity.last.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
     file = URI.open('https://www.charities.org/sites/default/files/styles/logo/public/ACLJ_Logo.jpg?itok=6PXf9odo')
-  charity9 =Charity.create!(name: "American Center for Law and Justice (ACLJ)", category: "Legal", description: "<h3>Specializing in constitutional law, 
+  charity9 =Charity.create!(name: "American Center for Law and Justice", category: "Legal", description: "<h3>Specializing in constitutional law, 
   the ACLJ is dedicated to the concept that freedom and democracy are God-given inalienable rights that must be protected.</h3> 
   <p>The organization provides legal services at no charge for those who are persecuted in their efforts to spread the gospel. The American Center for Law and Justice is dedicated to the promotion of pro-liberty, pro-life, 
   and pro-family causes. The organization defends religious liberties, human life, and the family in litigation cases all across the country. The ACLJ cooperates with other 
@@ -321,6 +323,10 @@ CharitysChoice.create!(charity_id: charity10.id, asset_id: asset7.id)
 CharitysChoice.create!(charity_id: charity10.id, asset_id: asset5.id)
 CharitysChoice.create!(charity_id: charity10.id, asset_id: asset2.id)
 
+CharitysChoice.create!(charity_id: charity11.id, asset_id: asset1.id)
+CharitysChoice.create!(charity_id: charity11.id, asset_id: asset4.id)
+CharitysChoice.create!(charity_id: charity11.id, asset_id: asset3.id)
+
 
 
 
@@ -337,6 +343,10 @@ puts "creating favourits"
   Favourite.create!(charity_id: charity7.id, user_id: user3.id)
   Favourite.create!(charity_id: charity3.id, user_id: user3.id)
 
+  Favourite.create!(charity_id: charity1.id, user_id: thomas.id)
+  Favourite.create!(charity_id: charity9.id, user_id: thomas.id)
+  Favourite.create!(charity_id: charity8.id, user_id: thomas.id)
+
 
 puts "creating donation"
 
@@ -346,6 +356,8 @@ puts "creating donation"
   Donation.create!(charity_id: charity4.id, user_id: user1.id, asset_id: asset5.id, donation_amount: 10000000, quantity: 100)
   Donation.create!(charity_id: charity1.id, user_id: user1.id, asset_id: asset1.id, donation_amount: 10, quantity: 1)
 
+  Donation.create!(charity_id: charity9.id, user_id: thomas.id, asset_id: asset1.id, donation_amount: 1000, quantity: 3,  order_status: "Filled")
+  Donation.create!(charity_id: charity8.id, user_id: thomas.id, asset_id: asset2.id, donation_amount: 500, quantity: 1,  order_status: "Failed")
 
 
 puts "injected seeds"
