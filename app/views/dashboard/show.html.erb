@@ -25,36 +25,36 @@
           </a>
         </div>
       </div>
+      <% end %>
     </div>
-  </div>
-  <% end %>
-  <div class="container-history">
-  <h3>Your History</h3>
-    <div class="tablever1">
-      <table>
-        <thead>
-          <tr class="table-header">
-            <th>Date</th>
-            <th>Name</th>
-            <th>Stock</th>
-            <th>Quantity</th>
-            <th>Amount</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody class="tablebody">
-          <% @donations.reverse.each do |donation| %>
-          <tr class="tabledata">
-            <td><%= donation.created_at.to_date %></td>
-            <td><%= donation.charity.name %></td>
-            <td><%= donation.asset.stock_symbol %></td>
-            <td><%= donation.quantity %></td>
-            <td><%= donation.donation_amount %></td>
-            <td><%= donation.order_status %></td>
-          </tr>
-        <% end %>
-        </tbody>
-      </table>
+    <div class="container-history">
+    <h3>Your History</h3>
+      <div class="tablever1">
+        <table>
+          <thead>
+            <tr class="table-header">
+              <th>Date</th>
+              <th>Name</th>
+              <th>Stock</th>
+              <th>Quantity</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody class="tablebody">
+            <% @donations.reverse.each do |donation| %>
+            <tr class="tabledata">
+              <td><%= donation.created_at.to_date %></td>
+              <td><%= donation.charity.name %></td>
+              <td><%= donation.asset.stock_symbol %></td>
+              <td><%= donation.quantity %></td>
+              <td><%= donation.donation_amount %></td>
+              <td><%= donation.order_status %></td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
