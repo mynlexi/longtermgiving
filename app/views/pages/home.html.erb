@@ -54,28 +54,19 @@
 
   <div class="container-fluid third inner flex hidden">
 
-    <div class="container flex">
-      <div class="border charity-card-container hidden">
-        <div class="charity-logo">
-          <% charity = Charity.find_by(name: "Junior Achievement of New York") %>
-          <%= cl_image_tag charity.photo.key, height: 171, width: 222, crop: :pad %>
-        </div>
-        <div class="charity-text-box">
-          <div class="header-3">
-            <%= charity.name %>
-          </div>
-          <div class="category pt-3">
-            <%= charity.category %>
-          </div>
-        </div>
-      </div>
-      <div class="container example">
+    <div class="container flex hidden">
+    <% charity = Charity.find_by(name: "Tynker - Coding for Kids") %>
+    <%= render "shared/single_charity_card", charity: charity %>
+
+      <div class="container example hidden">
        <h2>On of our Partner Charities:</h2>
-      <h4>The JA of New York uses equity founding to specifically combat systemic education inequality and deeply rooted issues that can not simply be resolved by a short-term project.</h4>
-        <p>Donations received over the Long Term Giving platform will directly benefit a permanently open workshop were children from challenged backgrounds can experience an uplifting and save the atmosphere.  Here the children have access to a wide array of different learning-mediums, information regarding education paths and scholarships and can partake in frequent contests, that cherish learning, succeeding and not giving up.</p>
-        <p>The contest range from Spelling Bees, over hackatons to Integration Bees and are open for all local contestants of all grades. </p>
+      <h4>Tynker wants to bring coding education to all children. </h4>
+        <p>Most classic information technology education offerings are outdated and very superficial. They are not age-appropriate, self-paced and often turn interested minds away from coding. Tynker wants to change that, and bring coding-lessons everywhere people have screens and an internet connection. </p>
+        <p>Tynkers projects have a very long run time, and after the initial investment, they need very little funds to keep afloat. Together with LongTermGiving, they plan to be self-sufficient until the end of 2022. This means they can operate indefinitely with the dividends matching their expenses. If they raise sufficient money on top of their ongoing costs, they can simply design and code another course and add it to their stack.</p>
       </div>
+   
       </div>
+ 
     </div>
   </div>
 
