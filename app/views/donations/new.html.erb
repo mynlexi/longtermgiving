@@ -24,18 +24,20 @@
 
           <%= simple_form_for([@charity, @donation], remote: true) do |f| %>
             <div class="form-inputs text-gray">
-              <span>current Price/Asset:</span><strong><span id='currentAssetPrice' class="d-none"><%= @price %></span><%= money_format(@price) %>€</strong>
+              <span>current price/asset:</span>
+              <br>
+              <strong><span id='currentAssetPrice' class="d-none"><%= @price %></span><%= money_format(@price) %>€</strong>
               <br>
               <br>
               <%= f.input :quantity, input_html: { min: 1, value: 1 } %>
               <%= f.input :asset_id, as: :hidden, :input_html => { :value => @asset.id } %>
               <%#= f.input :donation_amount %>
               <br>
-              <h3>total Price:</h3>
+              <h3>total:</h3>
               <h2 id="totalerPrice"> <%= money_format(@price) %>€ </h2>
             </div>
             <div class="form-actions">
-              <%= f.button :submit, "Donate" %>
+              <%= f.button :submit, "Donate", class: "btn-custom-donation" %>
             </div>
           <% end %>
         </div>
