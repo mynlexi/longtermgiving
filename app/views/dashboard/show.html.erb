@@ -1,27 +1,29 @@
-<div class="container-dashboard">
-  <div class="container-favourites">
-    <h3>Your Favourite Charities</h3>
-    <% if @favchar.empty? %>
-      <p> Here you can add your favourite charities </p>
-    <% else %>
-    <div class="row px-1 pb-5 justify-content-center">
-      <div id="carousel-favourites" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <% @favchar.each_with_index do |charity, index| %>
-            <% class_name = index.zero? ? "carousel-item active" : "carousel-item" %>
-            <div class="<%= class_name %>">
-              <%= render "shared/single_charity_card", charity: charity %>
-            </div>
-          <% end %>
+<div class="viewheight">
+  <div class="container-dashboard">
+    <div class="container-favourites">
+      <h3>Your Favourite Charities</h3>
+      <% if @favchar.empty? %>
+        <p> Here you can add your favourite charities </p>
+      <% else %>
+      <div class="row px-1 pb-5 justify-content-center">
+        <div id="carousel-favourites" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <% @favchar.each_with_index do |charity, index| %>
+              <% class_name = index.zero? ? "carousel-item active" : "carousel-item" %>
+              <div class="<%= class_name %>">
+                <%= render "shared/single_charity_card", charity: charity %>
+              </div>
+            <% end %>
+          </div>
+          <a class="carousel-control-prev" href="#carousel-favourites" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel-favourites" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-        <a class="carousel-control-prev" href="#carousel-favourites" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel-favourites" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
     </div>
   </div>
@@ -56,5 +58,4 @@
     </div>
   </div>
 </div>
-
 
