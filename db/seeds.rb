@@ -390,7 +390,7 @@ puts "creating donation"
   Donation.create!(charity_id: charity1.id, user_id: user1.id, asset_id: asset1.id, donation_amount: 10, quantity: 1)
 
   Donation.create!(charity_id: charity9.id, user_id: thomas.id, asset_id: asset1.id, donation_amount: 1000, quantity: 3,  order_status: "Filled")
-  Donation.create!(charity_id: charity8.id, user_id: thomas.id, asset_id: asset2.id, donation_amount: 500, quantity: 1,  order_status: "Failed")
+  Donation.create!(charity_id: charity8.id, user_id: thomas.id, asset_id: asset2.id, donation_amount: 500, quantity: 1,  order_status: "Filled")
 
 
 puts "injected seeds"
