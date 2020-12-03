@@ -27,4 +27,36 @@
   
   .text-gray {
     color: $light-gray;
+    text-align: center;
+    h3 {
+      color: $light-gray;
+    }
   }
+
+  .btn-custom-donation {
+    background: #0ba3b2!important;
+    border: solid 1px #0ba3b2;
+    font-family: Montserrat;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    justify-content: center;  
+    color: #FFFFFF;
+
+    background: $tile-figma;
+    border-radius: 3px;
+    height: 46px;
+    width: 260px;
+
+
+    &:hover {
+        background: #0ba4b2c9!important;
+        border: solid 1px #0ba3b2;
+    }
+}
