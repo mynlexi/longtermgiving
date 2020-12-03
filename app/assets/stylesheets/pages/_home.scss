@@ -2,7 +2,11 @@
 
 body {
   padding-top: 76px;
-  background-color: $background-orange;
+  background-color: $background-blue;
+}
+
+h3 {
+  font-weight: 600;
 }
 
 .flex {
@@ -31,7 +35,7 @@ body {
 }
 
 .second {
-  background-color: $background-orange;
+  background-color: $background-blue;
   min-height: 100vh;
 }
 
@@ -42,7 +46,7 @@ body {
 }
 
 .fourth {
-  background-color: $background-orange;
+  background-color: $background-blue;
   min-height: 93vh;
 }
 
@@ -111,9 +115,11 @@ animation: fade-in 1s ease forwards;
     left: 50%;
     margin: -12px;
     position: absolute;
-    display: none;
-
-    
+    display: none; 
   }
-  
+}
+
+.image-responsive img {
+  max-width: 80%;
+  margin: 0 auto;
 }

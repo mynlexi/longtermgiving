@@ -38,21 +38,29 @@
 
   <div class="container-fluid second inner flex ">
 
-      <div class="container-fluid mt-5 mx-5 px-5">
-        <h3 class="hidden">Standard fundraising only benefits the Tech-Megacorps, not the People</h3>
-        <p class="hidden">Most charities have to focus a large part of their resources on the continuous raising of funds to finance their operations.</p>
-        <p class="hidden">Additionally, most charities have to aggressively advertise in their competition with other non-profits,  creating more profit for the big
-         attention Aggregators and leave less for their own good cause.</p>
-        <p class="hidden">With Long-Term-Giving, charities can focus on creating long-term projects with long-term impacts.</p>
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-4">
+        <div class="container-fluid px-5 ml-5">
+          <h3 class="hidden">Standard fundraising only benefits the Tech-Megacorps, not the People</h3>
+          <p class="hidden">Most charities have to focus a large part of their resources on the continuous raising of funds to finance their operations.</p>
+          <p class="hidden">Additionally, most charities have to aggressively advertise in their competition with other non-profits,  creating more profit for the big advertisement Aggregators and leave less for their own good cause.</p>
+          <p class="hidden">With Long-Term-Giving, charities can focus on creating long-term projects with long-term impacts.</p>
+        </div>
+
       </div>
-      <div class="container-fluid mt-4">
-        <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606752553/homepage/long_term_funding_a5wuxf.png", class: "hidden" %>
+      <div class=" col-12 col-lg-8 my-3">
+        <div class="container-fluid image-responsive flex">
+          <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606752553/homepage/long_term_funding_a5wuxf.png", class: "hidden" %>
+        </div>
       </div>
+    </div>
+  </div>
 
 
   </div>
 
   <div class="container-fluid third inner flex hidden">
+
 
     <div class="container flex hidden">
     <% charity = Charity.find_by(name: "Tynker - Coding for Kids") %>
@@ -63,6 +71,7 @@
       <h4>Tynker wants to bring coding education to all children. </h4>
         <p>Most classic information technology education offerings are outdated and very superficial. They are not age-appropriate, self-paced and often turn interested minds away from coding. Tynker wants to change that, and bring coding-lessons everywhere people have screens and an internet connection. </p>
         <p>Tynkers projects have a very long run time, and after the initial investment, they need very little funds to keep afloat. Together with LongTermGiving, they plan to be self-sufficient until the end of 2022. This means they can operate indefinitely with the dividends matching their expenses. If they raise sufficient money on top of their ongoing costs, they can simply design and code another course and add it to their stack.</p>
+
       </div>
    
       </div>
@@ -70,22 +79,30 @@
     </div>
   </div>
 
-  <div class="container fourth flex-column inner hidden">
+  <div class="container fourth flex-column inner hidden pb-5">
     <div class="flex border-bottom half ">
       <div class="container-fluid mt-4 hidden">
-       <h3 class="hidden">Why should You use LTG to Give?</h3>
-       <p class="hidden">Charities should focus on where they are best. That's why we made the complicated stuff easy, and provide a plug-and-play solution for them. Donators can help charities in a more unique way by providing their market-insights giving them a more unique experience.</p>
-       <%# <p class="hidden">Donators can help charities in a more unique way by providing their market-insights giving them a more unique experience.</p> %>
+
+        <h3 class="hidden">Why should You use LTG to Give?</h3>
+        <p class="hidden">Charities should focus on where they are best. That's why we made the complicated stuff easy, and provide a plug-and-play solution for them.</p>
+        <p class="hidden">Donators can help charities in a more unique way by providing their market-insights giving them a more unique experience.</p>
       </div>
-        <div class="container-fluid mt-4 hidden">
-          <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606833102/homepage/Easy_solution_piuire.png", class: "hidden" %>
-        </div>
+      <div class="container-fluid mt-4 hidden">
+        <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606833102/homepage/Easy_solution_piuire.png", class: "hidden" %>
+
+      </div>
     </div>
-    <div class="flex half">
-      <h5 class="p-2 text-center">We make it look easy, but if you want more information what happens behind the scenes visit our github!</h5>
-      <div class="p-2 smaller">
+    <div class="text-center">
+      <div class="container-fluid mt-4 hidden">
+        <h3 class="hidden">looks easy, right?</h3>
+        <h2 class="hidden">What really happens:</h2>
+        <br>
+      </div>
+      <div class="container-fluid mt-4 p-5 hidden border">
         <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606752744/homepage/Complited_Solution_mptnom.png", class: "hidden" %>
       </div>
+      <br>
+      <p class="hidden">more information about what happens behind the scenes –> visit our github!</p> 
     </div>
   </div>
 </div>
