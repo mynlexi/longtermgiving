@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 2020_11_30_131048) do
     t.string "order_status", default: "New"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "price_cents", default: 0, null: false
     t.integer "amount_cents", default: 0, null: false
     t.string "state"
     t.string "checkout_session_id"
