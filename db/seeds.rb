@@ -17,6 +17,8 @@ User.destroy_all
 
 puts "creating users"
 
+  thomas = User.create!(email: "thomas@example.com", password: "123456")
+
   user1 = User.create!(email: "user1@example.com", password: "123456")
   user2 =User.create!(email: "user2@example.com", password: "123456")
   user3 =User.create!(email: "user3@example.com", password: "123456")
@@ -201,7 +203,7 @@ puts "creating charities /w pics"
     Charity.last.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
     file = URI.open('https://www.charities.org/sites/default/files/styles/logo/public/ACLJ_Logo.jpg?itok=6PXf9odo')
-  charity9 =Charity.create!(name: "American Center for Law and Justice (ACLJ)", category: "Legal", description: "<h3>Specializing in constitutional law, 
+  charity9 =Charity.create!(name: "American Center for Law and Justice", category: "Legal", description: "<h3>Specializing in constitutional law, 
   the ACLJ is dedicated to the concept that freedom and democracy are God-given inalienable rights that must be protected.</h3> 
   <p>The organization provides legal services at no charge for those who are persecuted in their efforts to spread the gospel. The American Center for Law and Justice is dedicated to the promotion of pro-liberty, pro-life, 
   and pro-family causes. The organization defends religious liberties, human life, and the family in litigation cases all across the country. The ACLJ cooperates with other 
@@ -250,6 +252,37 @@ puts "creating charities /w pics"
     
     <p>Learn more at curesearch.org.</p>")
     Charity.last.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+  
+    file = URI.open('https://images.tynker.com/blog/wp-content/uploads/tynker-logo-tagline.png')
+    charity11 =Charity.create!(name: "Tynker - Coding for Kids", category: "Education", description: 
+      "<h3>Tynker enables children to learn computer programming in a fun and imaginative way.</h3>
+  
+      <p>In a world where technology touches every aspect of our lives, it is crucial that our children become active creators of technology, not just passive users. We believe that the ability to code allows children to make their ideas a reality. Tynker's mission is to provide every child with solid foundations in Computer Science, programming, and critical thinking
+       skills to prepare them to become better architects of their future world.</p> 
+      <h5>Guided, Self-Paced Learning</h5>
+      <p>Kids learn on their own as they earn badges by completing game-like lessons.</p>
+      <h6>Step-by-Step Success</h6>
+      <p>Lessons are designed to guide kids on a path to earning cool new badges. In each lesson, kids engage with interactive learning modules, mini-games, coding projects, and puzzles.</p>
+      <h6>Interactive Approach</h6>
+      <p>Explanations:
+      Cool characters introduce code blocks and how to use them.</p>
+      <p>How-To Videos:
+      Short clips demonstrate common actions such as deleting Actors or changing the background.</p>
+      <p>Mini-Games
+      Preview the games you build in each lesson and play bonus games along the way.</p>
+      <h6>Guided Learning</h6>
+      <p>Kids learn on their own with a guided, hands-on approach that individualizes the learning experience.</p>
+      <p>Built-in Tutor:
+      Tutorials give step-by-step instructions that teach how to apply coding concepts so kids can complete projects without frustration.</p>
+      <p>Free Play Mode:
+      After completing a tutorial, kids can experiment with what they've built to help them apply the concepts they've learned.</p>
+      <h6>Start Visually, Move to Code</h6>
+      <p>Transition to Mainstream Languages:
+      With Tynker, students learn fundamental programming concepts and the principles of computational thinking. Once proficient, they can seamlessly transition to JavaScript coding within the Tynker learning system.</p>
+      <p>Not only can students switch between seeing their program in block view and code view in the Tynker Workshop, but they can also transition to coding in JavaScript with our new “Sky Pirates” course.</p>
+      
+      <p>Learn more at <a href='https://www.tynker.com/blog/'> Tynker.com.</p>")
+      Charity.last.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 
 
@@ -290,6 +323,10 @@ CharitysChoice.create!(charity_id: charity10.id, asset_id: asset7.id)
 CharitysChoice.create!(charity_id: charity10.id, asset_id: asset5.id)
 CharitysChoice.create!(charity_id: charity10.id, asset_id: asset2.id)
 
+CharitysChoice.create!(charity_id: charity11.id, asset_id: asset1.id)
+CharitysChoice.create!(charity_id: charity11.id, asset_id: asset4.id)
+CharitysChoice.create!(charity_id: charity11.id, asset_id: asset3.id)
+
 
 
 
@@ -306,6 +343,10 @@ puts "creating favourits"
   Favourite.create!(charity_id: charity7.id, user_id: user3.id)
   Favourite.create!(charity_id: charity3.id, user_id: user3.id)
 
+  Favourite.create!(charity_id: charity1.id, user_id: thomas.id)
+  Favourite.create!(charity_id: charity9.id, user_id: thomas.id)
+  Favourite.create!(charity_id: charity8.id, user_id: thomas.id)
+
 
 puts "creating donation"
 
@@ -315,6 +356,8 @@ puts "creating donation"
   Donation.create!(charity_id: charity4.id, user_id: user1.id, asset_id: asset5.id, donation_amount: 10000000, quantity: 100)
   Donation.create!(charity_id: charity1.id, user_id: user1.id, asset_id: asset1.id, donation_amount: 10, quantity: 1)
 
+  Donation.create!(charity_id: charity9.id, user_id: thomas.id, asset_id: asset1.id, donation_amount: 1000, quantity: 3,  order_status: "Filled")
+  Donation.create!(charity_id: charity8.id, user_id: thomas.id, asset_id: asset2.id, donation_amount: 500, quantity: 1,  order_status: "Failed")
 
 
 puts "injected seeds"

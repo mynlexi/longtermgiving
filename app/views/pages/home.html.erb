@@ -37,6 +37,7 @@
 
 
   <div class="container-fluid second inner flex ">
+
     <div class="row align-items-center">
       <div class="col-12 col-lg-4">
         <div class="container-fluid px-5 ml-5">
@@ -45,6 +46,7 @@
           <p class="hidden">Additionally, most charities have to aggressively advertise in their competition with other non-profits,  creating more profit for the big advertisement Aggregators and leave less for their own good cause.</p>
           <p class="hidden">With Long-Term-Giving, charities can focus on creating long-term projects with long-term impacts.</p>
         </div>
+
       </div>
       <div class=" col-12 col-lg-8 my-3">
         <div class="container-fluid image-responsive flex">
@@ -59,40 +61,35 @@
 
   <div class="container-fluid third inner flex hidden">
 
-    <div class="container flex">
-      <div class="border charity-card-container hidden">
-        <div class="charity-logo">
-          <% charity = Charity.find_by(name: "Junior Achievement of New York") %>
-          <%= cl_image_tag charity.photo.key, height: 171, width: 222, crop: :pad %>
-        </div>
-        <div class="charity-text-box">
-          <div class="header-3">
-            <%= charity.name %>
-          </div>
-          <div class="category pt-3">
-            <%= charity.category %>
-          </div>
-        </div>
+
+    <div class="container flex hidden">
+    <% charity = Charity.find_by(name: "Tynker - Coding for Kids") %>
+    <%= render "shared/single_charity_card", charity: charity %>
+
+      <div class="container example hidden">
+       <h2>On of our Partner Charities:</h2>
+      <h4>Tynker wants to bring coding education to all children. </h4>
+        <p>Most classic information technology education offerings are outdated and very superficial. They are not age-appropriate, self-paced and often turn interested minds away from coding. Tynker wants to change that, and bring coding-lessons everywhere people have screens and an internet connection. </p>
+        <p>Tynkers projects have a very long run time, and after the initial investment, they need very little funds to keep afloat. Together with LongTermGiving, they plan to be self-sufficient until the end of 2022. This means they can operate indefinitely with the dividends matching their expenses. If they raise sufficient money on top of their ongoing costs, they can simply design and code another course and add it to their stack.</p>
+
       </div>
-      <div class="container example">
-       <h2>One of our Partner Charities:</h2>
-      <h4>The JA of New York uses equity founding to specifically combat systemic education inequality and deeply rooted issues that can not simply be resolved by a short-term project.</h4>
-        <p>Donations received over the Long Term Giving platform will directly benefit a permanently open workshop were children from challenged backgrounds can experience an uplifting and save the atmosphere.  Here the children have access to a wide array of different learning-mediums, information regarding education paths and scholarships and can partake in frequent contests, that cherish learning, succeeding and not giving up.</p>
-        <p>The contest range from Spelling Bees, over hackatons to Integration Bees and are open for all local contestants of all grades. </p>
+   
       </div>
-      </div>
+ 
     </div>
   </div>
 
   <div class="container fourth flex-column inner hidden pb-5">
     <div class="flex border-bottom half ">
       <div class="container-fluid mt-4 hidden">
+
         <h3 class="hidden">Why should You use LTG to Give?</h3>
         <p class="hidden">Charities should focus on where they are best. That's why we made the complicated stuff easy, and provide a plug-and-play solution for them.</p>
         <p class="hidden">Donators can help charities in a more unique way by providing their market-insights giving them a more unique experience.</p>
       </div>
       <div class="container-fluid mt-4 hidden">
         <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606833102/homepage/Easy_solution_piuire.png", class: "hidden" %>
+
       </div>
     </div>
     <div class="text-center">
