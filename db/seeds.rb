@@ -281,7 +281,7 @@ puts "creating charities /w pics"
       With Tynker, students learn fundamental programming concepts and the principles of computational thinking. Once proficient, they can seamlessly transition to JavaScript coding within the Tynker learning system.</p>
       <p>Not only can students switch between seeing their program in block view and code view in the Tynker Workshop, but they can also transition to coding in JavaScript with our new “Sky Pirates” course.</p>
       
-      <p>Learn more at <a href='https://www.tynker.com/blog/'> Tynker.com.</p>")
+      <p>Learn more at <a href=\"https://www.tynker.com/blog/\" target=\"_blank\"> Tynker</a>.</p>")
       Charity.last.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 
