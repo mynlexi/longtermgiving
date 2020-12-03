@@ -5,8 +5,19 @@ body {
   background-color: $background-blue;
 }
 
-h3 {
-  font-weight: 600;
+.page-header-3 h2 {
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  color: #198d98;
+  margin: 24px auto;
+  padding-top: 8px;
+  border-bottom: solid 1px;
+  text-shadow: 1px 1px 4px;
+  font-size: 2.5rem;
+}
+
+.page-header-2 h3 {
+  color: #198d98;
 }
 
 .flex {
