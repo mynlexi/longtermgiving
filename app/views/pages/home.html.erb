@@ -5,16 +5,17 @@
   <div class="container-fluid first flex" >
 
     <div class="animation">
-      <div class="logo-on-landingpage">
+      <div class="logo-on-landingpage banner-margins-top">
             <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606837149/Logo/LGT_full_logo_V10_phajvf.svg", height:200 %>
       </div>
-      <div class="text-left-on-landingpage-and-searchbar">
-        <div class="text-left-on-landingpage">
-          <h4>Donate smart and sustainable</h4>        
-          <p>something something something something <span id="banner-typed-text"></span></p>
-
+      <div class="text-left-on-landingpage-and-searchbar text-center">
+        <div class="text-left-on-landingpage banner-margins-top">
+          <p>donate smart and sustainable</p>        
         </div>
-        <div class="search-field search-charity d-flex form-inline">
+        <div class="text-left-on-landingpage justify-content-center banner-margins-top">   
+          <h4>Invest in <span id="banner-typed-text"></span></h4>
+        </div>
+        <div class="search-field search-charity d-flex form-inline banner-margins-top justify-content-center">
           <%= form_tag charities_path, method: :get do %>
             <%= text_field_tag :query,
               params[:query],

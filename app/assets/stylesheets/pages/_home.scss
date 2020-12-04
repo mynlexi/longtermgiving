@@ -91,13 +91,13 @@ animation: fade-in 1s ease forwards;
   z-index: 1000;
 }
 
-.search-field {
-  position: absolute;
-  width: 33%;
-  top: 40%;
-  left: 41%; 
-  z-index: 1001;
-}
+// .search-field {
+//   position: absolute;
+//   width: 33%;
+//   top: 40%;
+//   left: 41%; 
+//   z-index: 1001;
+// }
 
 .arrow-button{
   height: 56px;
@@ -246,4 +246,8 @@ color: #000000;
 
 .text-left-on-landingpage-and-searchbar .text-left-on-landingpage {
   color: #FFFFFF;
+}
+
+.banner-margins-top {
+  margin-top: 3%;
 }
