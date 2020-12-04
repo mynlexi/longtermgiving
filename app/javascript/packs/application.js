@@ -28,6 +28,7 @@ import { updateTotalPrice } from "./totalprice";
 import { scroll_input } from "./scroll";
 import { arrowScroll } from "./arrow";
 
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
@@ -43,3 +44,10 @@ document.addEventListener('turbolinks:load', () => {
   }
 });
 
+import { loadDynamicBannerText } from '../packs/banner';
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your JS functions here
+  // [...]
+  loadDynamicBannerText();
+});

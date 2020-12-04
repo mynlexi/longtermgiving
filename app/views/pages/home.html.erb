@@ -5,15 +5,25 @@
   <div class="container-fluid first flex" >
 
     <div class="animation">
-      <div class="search-field search-charity d-flex form-inline">
-        <%= form_tag charities_path, method: :get do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control search-custom",
-            placeholder: "Find your charity!"
-          %>
-          <%= submit_tag "Search", class: "btn btn-primary btn-custom" %>
-        <% end %>
+      <div class="logo-on-landingpage">
+            <%= image_tag "https://res.cloudinary.com/dnikk3d1u/image/upload/v1606837149/Logo/LGT_full_logo_V10_phajvf.svg", height:200 %>
+      </div>
+      <div class="text-left-on-landingpage-and-searchbar">
+        <div class="text-left-on-landingpage">
+          <h4>Donate smart and sustainable</h4>        
+          <p>something something something something <span id="banner-typed-text"></span></p>
+
+        </div>
+        <div class="search-field search-charity d-flex form-inline">
+          <%= form_tag charities_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control search-custom",
+              placeholder: "Find your charity!"
+            %>
+            <%= submit_tag "Search", class: "btn btn-primary btn-custom" %>
+          <% end %>
+        </div>
       </div>
 
       <%= cl_image_tag "Vektor/Vector_2_m74hmm", :class => "animation-swing s1" %>
