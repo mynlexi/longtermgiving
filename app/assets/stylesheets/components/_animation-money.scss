@@ -1,0 +1,57 @@
+.money-parent {
+  position: relative;
+}
+.animation-box {
+  position: absolute;
+  right: 18%;
+  width: 100px;
+  height: 125px;
+}
+
+.animation-money {
+  position: relative;
+  width: 100px;
+  height: 125px;
+}
+
+.animation-money i {
+  animation-name: moneydrop;
+  position: absolute;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transition:  ease-in-out;
+}
+
+@keyframes moneydrop {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0px)
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(90px)
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(90px)
+  }
+
+}
+
+.animation-money i:nth-child(1){
+  animation-delay: 0s;
+  top: 40%;
+  
+}
+.animation-money i:nth-child(2){
+  animation-delay: 0.5s;
+  top: 35%;
+}
+.animation-money i:nth-child(3){
+  animation-delay: 1s;
+  top: 30%;
+}
